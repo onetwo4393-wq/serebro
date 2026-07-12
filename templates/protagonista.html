@@ -1,17 +1,87 @@
 {% extends "base.html" %}
+{% block body_class %}protagonista-page{% endblock %}
 {% block content %}
-<div class="contenedor">
-    <article class="perfil-container">
-        <header class="perfil-header">
-            <span class="etiqueta">Protagonista</span>
-            <h1 class="perfil-nombre">{{ page.title }}</h1>
-        </header>
-        <div class="perfil-contenido">
-            {{ page.content | safe }}
+
+<!-- HERO DEL PROTAGONISTA -->
+<div class="protagonista-hero" style="
+    background: 
+        linear-gradient(to right, rgba(10,8,6,0.92) 0%, rgba(10,8,6,0.5) 60%, transparent 100%),
+        {% if page.extra.foto %}url(/assets/img/protagonistas/{{ page.extra.foto }}){% else %}url(/assets/img/protagonistas/{{ page.slug }}.jpg){% endif %} center/cover no-repeat;
+">
+    <div class="protagonista-hero-contenido">
+        <div class="protagonista-bandera">{{ page.extra.bandera | default(value="🏳️") }}</div>
+        <div class="protagonista-pais-label">{{ page.extra.nacionalidad | default(value="Internacional") }}</div>
+        <h1 class="protagonista-nombre">{{ page.title }}</h1>
+        {% if page.extra.apodo %}
+        <div class="protagonista-apodo">"{{ page.extra.apodo }}"</div>
+        {% endif %}
+        <div class="protagonista-stats-bar">
+            {% if page.extra.record %}
+            <div class="pstat">
+                <span class="pstat-val">{{ page.extra.record }}</span>
+                <span class="pstat-label">Récord</span>
+            </div>
+            {% endif %}
+            {% if page.extra.categoria %}
+            <div class="pstat">
+                <span class="pstat-val">{{ page.extra.categoria }}</span>
+                <span class="pstat-label">División</span>
+            </div>
+            {% endif %}
+            {% if page.extra.rating %}
+            <div class="pstat pstat-rating">
+                <span class="pstat-val">{{ page.extra.rating }}</span>
+                <span class="pstat-label">Rating</span>
+            </div>
+            {% endif %}
         </div>
-        <p style="margin-top: 50px;">
-            <a href="/" style="color: var(--accent);">← Volver al inicio</a>
-        </p>
-    </article>
+    </div>
 </div>
+
+<!-- BIO + ENTREVISTAS -->
+<div class="contenedor">
+    <div class="protagonista-layout">
+
+        <!-- Bio -->
+        <div class="protagonista-bio">
+            <h2 class="bloque-titulo" style="margin-top: 0;">El Personaje</h2>
+            <div class="perfil-contenido">
+                {{ page.content | safe }}
+            </div>
+        </div>
+
+        <!-- Sidebar entrevistas -->
+        <div class="protagonista-sidebar">
+            <h2 class="bloque-titulo" style="margin-top: 0;">Entrevistas de Jorge Ebro</h2>
+            {% set todas = get_section(path="exclusivas/_index.md") %}
+            {% set_global hay_entrevistas = false %}
+            {% for entrevista in todas.pages %}
+                {% if entrevista.extra.protagonista == page.slug %}
+                {% set_global hay_entrevistas = true %}
+                <div class="entrevista-card">
+                    {% if entrevista.extra.youtube_id %}
+                    <div class="entrevista-thumb">
+                        <img src="https://img.youtube.com/vi/{{ entrevista.extra.youtube_id }}/mqdefault.jpg" alt="{{ entrevista.title }}">
+                        <a href="{{ entrevista.permalink }}" class="entrevista-play">▶</a>
+                    </div>
+                    {% endif %}
+                    <div class="entrevista-info">
+                        <h4 class="entrevista-titulo"><a href="{{ entrevista.permalink }}">{{ entrevista.title }}</a></h4>
+                        <div class="tarjeta-fecha">{{ entrevista.date | date(format="%d de %B, %Y") }}</div>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+            {% if not hay_entrevistas %}
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Próximamente — Jorge Ebro tiene entrevistas exclusivas con este protagonista.</p>
+            {% endif %}
+        </div>
+
+    </div>
+
+    <p style="margin-top: 50px;">
+        <a href="/" style="color: var(--accent);">← Volver al inicio</a>
+    </p>
+</div>
+
 {% endblock content %}

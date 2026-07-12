@@ -6,20 +6,28 @@ description = "Campeón indiscutido de peso ligero de la UFC. El Georgian Nightm
 
 [extra]
 nacionalidad = "Georgia / España"
+bandera = "🇬🇪"
+apodo = "El Matador"
 categoria = "Peso Ligero"
 record = "16-0"
+rating = "97"
+foto = "topuria.jpg"
 destacado = true
 +++
 
-Ilia Topuria es el campeón mundial de peso ligero de la UFC y uno de los peleadores más dominantes de su generación. Nacido en Georgia y criado en España, Topuria combina un striking devastador con un juego de suelo de élite que lo ha llevado a ser invicto en su carrera profesional.
+Ilia Topuria no es solo un campeón — es una historia de emigración, sacrificio y conquista. Nació en Georgia, creció en España, y le ganó al mundo entero dentro del octágono. Para los que no siguen las MMA: imaginate a un tipo que llegó de cero a un país extranjero y terminó siendo el mejor del planeta en su deporte.
 
 ## Trayectoria
 
 Debutó en la UFC en 2020 y construyó una racha de victorias que lo llevó directo al título. Su nocaut sobre Alexander Volkanovski en UFC 298 lo catapultó al estrellato mundial y lo convirtió en el primer campeón georgiano en la historia de la promoción.
 
+## ¿Por qué te tiene que importar?
+
+Topuria pelea con una intensidad que no se ve seguido. Cada nocaut suyo es un evento. Tiene el carisma de Conor McGregor en sus mejores años, pero con más sustancia dentro de la jaula. Si nunca viste MMA y querés empezar por alguien, empezá por él.
+
 ## Estilo de pelea
 
-Topuria es un peleador completo. Su boxeo es técnico y potente, con un KO power inusual para el peso ligero. En el suelo maneja el jiu-jitsu brasileño a nivel negro, lo que lo hace peligroso en cualquier posición.
+Boxeo técnico y potente, con un KO power inusual para el peso ligero. En el suelo maneja el jiu-jitsu brasileño a nivel negro.
 
 ## Cobertura de Jorge Ebro
 
