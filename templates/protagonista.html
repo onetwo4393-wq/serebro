@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="contenedor">
+    <article class="perfil-container">
+        <header class="perfil-header">
+            <span class="etiqueta">Protagonista</span>
+            <h1 class="perfil-nombre">{{ page.title }}</h1>
+        </header>
+        <div class="perfil-contenido">
+            {{ page.content | safe }}
+        </div>
+        <p style="margin-top: 50px;">
+            <a href="/" style="color: var(--accent);">← Volver al inicio</a>
+        </p>
+    </article>
+</div>
+{% endblock content %}

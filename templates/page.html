@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="contenedor">
+    <article class="nota-container">
+        <header class="nota-header">
+            <span class="etiqueta">
+                {% if section.title %}{{ section.title }}{% else %}Nota{% endif %}
+            </span>
+            <h1 class="nota-titulo">{{ page.title }}</h1>
+            <div class="nota-fecha">
+                {% if page.date %}{{ page.date | date(format="%d de %B, %Y") }}{% endif %}
+            </div>
+        </header>
+        <div class="nota-contenido">
+            {{ page.content | safe }}
+        </div>
+        <p style="margin-top: 50px;">
+            <a href="javascript:history.back()" style="color: var(--accent);">← Volver</a>
+        </p>
+    </article>
+</div>
+{% endblock content %}

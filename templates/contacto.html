@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="contenedor">
+    <article class="nota-container">
+        <header class="nota-header">
+            <span class="etiqueta">Contacto</span>
+            <h1 class="nota-titulo">Contacto</h1>
+        </header>
+        <div class="nota-contenido">
+            <p>¿Querés comunicarte con Jorge Ebro? Dejá tu mensaje y te responde a la brevedad.</p>
+            <div style="margin-top: 40px; display: flex; flex-direction: column; gap: 20px; max-width: 600px;">
+                <div>
+                    <label style="display:block; font-family: var(--font-titulo); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; margin-bottom: 8px; color: var(--text-muted);">Nombre</label>
+                    <input type="text" placeholder="Tu nombre" style="width: 100%; padding: 12px 15px; background: var(--bg-card); border: 1px solid var(--border-light); color: var(--text-main); font-family: var(--font-cuerpo); font-size: 1rem; box-sizing: border-box;">
+                </div>
+                <div>
+                    <label style="display:block; font-family: var(--font-titulo); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; margin-bottom: 8px; color: var(--text-muted);">Email</label>
+                    <input type="email" placeholder="tu@email.com" style="width: 100%; padding: 12px 15px; background: var(--bg-card); border: 1px solid var(--border-light); color: var(--text-main); font-family: var(--font-cuerpo); font-size: 1rem; box-sizing: border-box;">
+                </div>
+                <div>
+                    <label style="display:block; font-family: var(--font-titulo); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; margin-bottom: 8px; color: var(--text-muted);">Mensaje</label>
+                    <textarea placeholder="Tu mensaje..." rows="6" style="width: 100%; padding: 12px 15px; background: var(--bg-card); border: 1px solid var(--border-light); color: var(--text-main); font-family: var(--font-cuerpo); font-size: 1rem; box-sizing: border-box; resize: vertical;"></textarea>
+                </div>
+                <div>
+                    <button style="background: var(--accent); color: #fff; border: none; padding: 14px 35px; font-family: var(--font-titulo); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: background 0.2s;" onmouseover="this.style.background='var(--accent-hover)'" onmouseout="this.style.background='var(--accent)'">Enviar mensaje</button>
+                </div>
+            </div>
+            <div style="margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--border-light);">
+                <p style="color: var(--text-muted);">También podés encontrar a Jorge en:</p>
+                <p><a href="#" style="color: var(--accent);">YouTube</a> · <a href="#" style="color: var(--accent);">Instagram</a> · <a href="#" style="color: var(--accent);">X / Twitter</a></p>
+            </div>
+        </div>
+    </article>
+</div>
+{% endblock content %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="contenedor">
+    <article class="nota-container">
+        <header class="nota-header">
+            <span class="etiqueta">Evento</span>
+            <h1 class="nota-titulo">{{ page.title }}</h1>
+            <div class="nota-fecha">
+                {% if page.extra.fecha_evento %}{{ page.extra.fecha_evento }}{% elif page.date %}{{ page.date | date(format="%d de %B, %Y") }}{% endif %}
+                {% if page.extra.lugar %} · {{ page.extra.lugar }}{% endif %}
+            </div>
+        </header>
+
+        {% if page.extra.cartelera %}
+        <div style="margin-bottom: 50px;">
+            <h2 style="font-family: var(--font-titulo); text-transform: uppercase; font-size: 1.8rem; border-bottom: 1px solid var(--border-light); padding-bottom: 10px; margin-bottom: 25px;">Cartelera</h2>
+            {% for pelea in page.extra.cartelera %}
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid var(--border-subtle);">
+                <span style="font-family: var(--font-titulo); font-size: 1.2rem; text-transform: uppercase; flex: 1; text-align: right;">{{ pelea.rojo }}</span>
+                <span style="background: var(--accent); color: #fff; padding: 4px 14px; font-family: var(--font-titulo); font-size: 0.85rem; margin: 0 20px; white-space: nowrap;">VS</span>
+                <span style="font-family: var(--font-titulo); font-size: 1.2rem; text-transform: uppercase; flex: 1;">{{ pelea.azul }}</span>
+                {% if pelea.titulo %}
+                <span style="font-size: 0.8rem; color: var(--accent); text-transform: uppercase; font-weight: 600; letter-spacing: 1px; margin-left: 20px;">{{ pelea.titulo }}</span>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="nota-contenido">
+            {{ page.content | safe }}
+        </div>
+
+        <p style="margin-top: 50px;">
+            <a href="javascript:history.back()" style="color: var(--accent);">← Volver</a>
+        </p>
+    </article>
+</div>
+{% endblock content %}

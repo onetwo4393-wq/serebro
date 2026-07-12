@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="contenedor">
+    <h1 class="seccion-titulo">Protagonistas</h1>
+    <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 40px; max-width: 600px;">Los principales actores del Boxeo y las MMA bajo la lupa de Jorge Ebro.</p>
+    <div class="grilla">
+        {% for page in section.pages %}
+        <div class="tarjeta">
+            <span class="etiqueta" style="margin-bottom: 15px; display: inline-block;">
+                {% if page.extra.categoria %}{{ page.extra.categoria }}{% elif page.extra.rol %}{{ page.extra.rol }}{% else %}Protagonista{% endif %}
+            </span>
+            <h4 class="tarjeta-titulo"><a href="{{ page.permalink }}">{{ page.title }}</a></h4>
+            {% if page.extra.nacionalidad %}
+            <div class="tarjeta-fecha">{{ page.extra.nacionalidad }}</div>
+            {% endif %}
+            <p class="tarjeta-desc">{{ page.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

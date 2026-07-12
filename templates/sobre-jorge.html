@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="contenedor">
+    <article class="perfil-container">
+        <header class="perfil-header">
+            <span class="etiqueta">Periodista</span>
+            <h1 class="perfil-nombre">Jorge Ebro</h1>
+        </header>
+        <div class="perfil-contenido">
+            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start;">
+                <div>
+                    <img src="/assets/img/jorge-ebro.webp"
+                         alt="Jorge Ebro"
+                         style="width: 100%; border-top: 4px solid var(--accent);">
+                </div>
+                <div>
+                    <p>Jorge Ebro es periodista deportivo especializado en Boxeo y Artes Marciales Mixtas (MMA), con base en Miami. Conocido por su acceso exclusivo a los principales protagonistas del deporte de combate a nivel mundial.</p>
+                    <p>Con años de trayectoria cubriendo las grandes carteleras de la UFC y el boxeo profesional, Jorge se ha posicionado como una de las voces de referencia en el periodismo de combate en español.</p>
+                    <p>Su trabajo incluye entrevistas en exclusiva con campeones mundiales, análisis técnicos y cobertura en vivo desde los principales eventos del circuito internacional.</p>
+                    <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid var(--border-light);">
+                        <p style="color: var(--text-muted); font-family: var(--font-titulo); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Seguí a Jorge</p>
+                        <p><a href="#" style="color: var(--accent);">YouTube</a> · <a href="#" style="color: var(--accent);">Instagram</a> · <a href="#" style="color: var(--accent);">X / Twitter</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
+{% endblock content %}

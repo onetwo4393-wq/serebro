@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} | {% elif section.title %}{{ section.title }} | {% endif %}Ser Ebro En Los Deportes</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% elif section.description %}{{ section.description }}{% else %}Periodismo deportivo de Boxeo y MMA con Jorge Ebro.{% endif %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="{% block body_class %}{% endblock %}">
+    <header>
+        <div class="header-container">
+            <nav class="nav-bloque">
+                <a href="/boxeo/">Boxeo</a>
+                <a href="/ufc/">UFC</a>
+                <a href="/mma/">MMA</a>
+            </nav>
+            <div class="logo-centro">
+                <a href="/" class="logo">Ser Ebro</a>
+                <span class="logo-sub">En Los Deportes</span>
+            </div>
+            <nav class="nav-bloque nav-der">
+                <a href="/sobre-jorge/">Sobre Jorge</a>
+                <a href="/contacto/">Contacto</a>
+                <button class="theme-toggle" onclick="document.body.classList.toggle('light-mode')">Tema</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>© {{ now() | date(format="%Y") }} Ser Ebro En Los Deportes — Periodismo de Boxeo y MMA</p>
+        <p><a href="/sobre-jorge/">Sobre Jorge</a> · <a href="/contacto/">Contacto</a></p>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

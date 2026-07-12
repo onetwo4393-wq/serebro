@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block body_class %}home{% endblock %}
+{% block content %}
+
+<div class="hero-home">
+    <h1>El Radar de<br>Jorge Ebro</h1>
+    <p>Toda la actualidad del Boxeo, UFC y las MMA. Análisis sin filtro y la mejor cobertura desde adentro de la jaula.</p>
+</div>
+
+<div class="contenedor">
+    <h2 class="bloque-titulo">En el Octágono</h2>
+    <div class="grilla">
+        {% set seccion_ufc = get_section(path="ufc/_index.md") %}
+        {% for page in seccion_ufc.pages | slice(end=3) %}
+        <div class="tarjeta">
+            <h4 class="tarjeta-titulo"><a href="{{ page.permalink }}">{{ page.title }}</a></h4>
+            <div class="tarjeta-fecha">{% if page.date %}{{ page.date | date(format="%d de %B, %Y") }}{% endif %}</div>
+            <p class="tarjeta-desc">{% if page.description %}{{ page.description | truncate(length=120) }}{% endif %}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <h2 class="bloque-titulo">En el Ring</h2>
+    <div class="grilla">
+        {% set seccion_boxeo = get_section(path="boxeo/_index.md") %}
+        {% for page in seccion_boxeo.pages | slice(end=3) %}
+        <div class="tarjeta">
+            <h4 class="tarjeta-titulo"><a href="{{ page.permalink }}">{{ page.title }}</a></h4>
+            <div class="tarjeta-fecha">{% if page.date %}{{ page.date | date(format="%d de %B, %Y") }}{% endif %}</div>
+            <p class="tarjeta-desc">{% if page.description %}{{ page.description | truncate(length=120) }}{% endif %}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <h2 class="bloque-titulo">En la Jaula</h2>
+    <div class="grilla">
+        {% set seccion_mma = get_section(path="mma/_index.md") %}
+        {% for page in seccion_mma.pages | slice(end=3) %}
+        <div class="tarjeta">
+            <h4 class="tarjeta-titulo"><a href="{{ page.permalink }}">{{ page.title }}</a></h4>
+            <div class="tarjeta-fecha">{% if page.date %}{{ page.date | date(format="%d de %B, %Y") }}{% endif %}</div>
+            <p class="tarjeta-desc">{% if page.description %}{{ page.description | truncate(length=120) }}{% endif %}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}
