@@ -1,0 +1,46 @@
+{% import "macros.html" as macros %}
+{% extends "base.html" %}
+{% block content %}
+<div class="contenedor">
+    <h1 class="seccion-titulo">{{ section.title }}</h1>
+
+    <div class="cartas-grid" style="margin-bottom: 50px;">
+
+        <div class="carta-peleador carta-coming-soon">
+            <div class="carta-overlay-coming">
+                <div class="coming-soon-icono">🥊</div>
+                <div class="coming-soon-label">Próximamente</div>
+                <h3 class="coming-soon-nombre">Alex Pereira</h3>
+                <p class="coming-soon-desc">El campeón de GLORY Kickboxing que conquistó la UFC</p>
+            </div>
+        </div>
+
+        <div class="carta-peleador carta-coming-soon">
+            <div class="carta-overlay-coming">
+                <div class="coming-soon-icono">🥊</div>
+                <div class="coming-soon-label">Próximamente</div>
+                <h3 class="coming-soon-nombre">Rico Verhoeven</h3>
+                <p class="coming-soon-desc">El rey indiscutido del kickboxing mundial</p>
+            </div>
+        </div>
+
+        <div class="carta-peleador carta-coming-soon">
+            <div class="carta-overlay-coming">
+                <div class="coming-soon-icono">🥊</div>
+                <div class="coming-soon-label">Próximamente</div>
+                <h3 class="coming-soon-nombre">Badr Hari</h3>
+                <p class="coming-soon-desc">La leyenda marroquí del K1 que marcó una era</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="coming-soon-banner">
+        <div class="coming-soon-banner-contenido">
+            <h2>Sección en construcción</h2>
+            <p>Jorge Ebro está preparando cobertura exclusiva del mundo del Kickboxing y K1. Volvé pronto.</p>
+        </div>
+    </div>
+
+</div>
+{% endblock content %}
