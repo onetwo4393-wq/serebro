@@ -1,3 +1,4 @@
+{% import "macros.html" as macros %}
 {% extends "base.html" %}
 {% block body_class %}home{% endblock %}
 {% block content %}
@@ -12,30 +13,21 @@
     <h2 class="bloque-titulo">Los Protagonistas</h2>
     <div class="cartas-grid">
 
-        <div class="carta-peleador carta-ge">
+        <div class="carta-peleador carta-us">
             <div class="carta-acento"></div>
             <div class="carta-borde"></div>
-            <div class="carta-rating">97</div>
-            <img class="carta-foto" src="/assets/img/protagonistas/topuria.webp" alt="Ilia Topuria">
+            <div class="carta-rating">95</div>
+            <img class="carta-foto" src="/assets/img/protagonistas/justin_gaethje.webp" alt="Justin Gaethje">
             <div class="carta-overlay">
-                <div class="carta-pais">🇬🇪 Georgia · España</div>
-                <h3 class="carta-nombre">Ilia Topuria</h3>
+                <div class="carta-pais">🇺🇸 ESTADOS UNIDOS</div>
+                <h3 class="carta-nombre">Justin Gaethje</h3>
                 <div class="carta-stats">
-                    <div class="carta-stat">
-                        <span class="carta-stat-valor">16-0</span>
-                        <span class="carta-stat-label">Récord</span>
-                    </div>
-                    <div class="carta-stat">
-                        <span class="carta-stat-valor">Ligero</span>
-                        <span class="carta-stat-label">División</span>
-                    </div>
-                    <div class="carta-stat">
-                        <span class="carta-stat-valor">Campeón</span>
-                        <span class="carta-stat-label">UFC</span>
-                    </div>
+                    <div class="carta-stat"><span class="carta-stat-valor">28-4</span><span class="carta-stat-label">Récord</span></div>
+                    <div class="carta-stat"><span class="carta-stat-valor">Ligero</span><span class="carta-stat-label">División</span></div>
+                    <div class="carta-stat"><span class="carta-stat-valor">Campeón</span><span class="carta-stat-label">UFC</span></div>
                 </div>
             </div>
-            <a href="/protagonistas/topuria/"></a>
+            <a href="/protagonistas/justin-gaethje/"></a>
         </div>
 
         <div class="carta-peleador carta-mx">
@@ -44,50 +36,32 @@
             <div class="carta-rating">99</div>
             <img class="carta-foto" src="/assets/img/protagonistas/canelo.webp" alt="Canelo Álvarez">
             <div class="carta-overlay">
-                <div class="carta-pais">🇲🇽 México</div>
+                <div class="carta-pais">🇲🇽 MÉXICO</div>
                 <h3 class="carta-nombre">Canelo Álvarez</h3>
                 <div class="carta-stats">
-                    <div class="carta-stat">
-                        <span class="carta-stat-valor">61-2-2</span>
-                        <span class="carta-stat-label">Récord</span>
-                    </div>
-                    <div class="carta-stat">
-                        <span class="carta-stat-valor">Super Med.</span>
-                        <span class="carta-stat-label">División</span>
-                    </div>
-                    <div class="carta-stat">
-                        <span class="carta-stat-valor">Campeón</span>
-                        <span class="carta-stat-label">Indiscutido</span>
-                    </div>
+                    <div class="carta-stat"><span class="carta-stat-valor">61-2-2</span><span class="carta-stat-label">Récord</span></div>
+                    <div class="carta-stat"><span class="carta-stat-valor">Super Med.</span><span class="carta-stat-label">División</span></div>
+                    <div class="carta-stat"><span class="carta-stat-valor">Campeón</span><span class="carta-stat-label">Indiscutido</span></div>
                 </div>
             </div>
             <a href="/protagonistas/canelo-alvarez/"></a>
         </div>
 
-        <div class="carta-peleador carta-ie">
+        <div class="carta-peleador carta-us">
             <div class="carta-acento"></div>
             <div class="carta-borde"></div>
-            <div class="carta-rating">95</div>
-            <img class="carta-foto" src="/assets/img/protagonistas/conor.webp" alt="Conor McGregor">
+            <div class="carta-rating">93</div>
+            <img class="carta-foto" src="/assets/img/protagonistas/max_holloway.webp" alt="Max Holloway">
             <div class="carta-overlay">
-                <div class="carta-pais">🇮🇪 Irlanda</div>
-                <h3 class="carta-nombre">Conor McGregor</h3>
+                <div class="carta-pais">🇺🇸 HAWÁI</div>
+                <h3 class="carta-nombre">Max Holloway</h3>
                 <div class="carta-stats">
-                    <div class="carta-stat">
-                        <span class="carta-stat-valor">22-6</span>
-                        <span class="carta-stat-label">Récord</span>
-                    </div>
-                    <div class="carta-stat">
-                        <span class="carta-stat-valor">Ligero</span>
-                        <span class="carta-stat-label">División</span>
-                    </div>
-                    <div class="carta-stat">
-                        <span class="carta-stat-valor">Ex Campeón</span>
-                        <span class="carta-stat-label">UFC</span>
-                    </div>
+                    <div class="carta-stat"><span class="carta-stat-valor">26-7</span><span class="carta-stat-label">Récord</span></div>
+                    <div class="carta-stat"><span class="carta-stat-valor">Pluma</span><span class="carta-stat-label">División</span></div>
+                    <div class="carta-stat"><span class="carta-stat-valor">Leyenda</span><span class="carta-stat-label">UFC</span></div>
                 </div>
             </div>
-            <a href="/protagonistas/conor-mcgregor/"></a>
+            <a href="/protagonistas/max-holloway/"></a>
         </div>
 
         <div class="carta-peleador carta-ru">
@@ -96,21 +70,12 @@
             <div class="carta-rating">96</div>
             <img class="carta-foto" src="/assets/img/protagonistas/makhachev.webp" alt="Islam Makhachev">
             <div class="carta-overlay">
-                <div class="carta-pais">🇷🇺 Rusia</div>
+                <div class="carta-pais">🇷🇺 RUSIA</div>
                 <h3 class="carta-nombre">Islam Makhachev</h3>
                 <div class="carta-stats">
-                    <div class="carta-stat">
-                        <span class="carta-stat-valor">27-1</span>
-                        <span class="carta-stat-label">Récord</span>
-                    </div>
-                    <div class="carta-stat">
-                        <span class="carta-stat-valor">Ligero</span>
-                        <span class="carta-stat-label">División</span>
-                    </div>
-                    <div class="carta-stat">
-                        <span class="carta-stat-valor">Ex Campeón</span>
-                        <span class="carta-stat-label">UFC</span>
-                    </div>
+                    <div class="carta-stat"><span class="carta-stat-valor">27-1</span><span class="carta-stat-label">Récord</span></div>
+                    <div class="carta-stat"><span class="carta-stat-valor">Ligero</span><span class="carta-stat-label">División</span></div>
+                    <div class="carta-stat"><span class="carta-stat-valor">Ex Campeón</span><span class="carta-stat-label">UFC</span></div>
                 </div>
             </div>
             <a href="/protagonistas/islam-makhachev/"></a>

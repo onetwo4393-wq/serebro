@@ -216,3 +216,9 @@ footer a:hover { text-decoration: underline; }
     .grilla { grid-template-columns: 1fr; }
     .cartas-grid { grid-template-columns: 1fr; }
 }
+
+.carta-us .carta-acento { background: linear-gradient(135deg, #b22234, #ffffff, #3c3b6e); }
+.carta-us .carta-rating { background: linear-gradient(135deg, #b22234, #3c3b6e); box-shadow: 0 4px 15px rgba(178,34,52,0.5); }
+.carta-us .carta-pais { color: #c9a84c; }
+.carta-us .carta-stat-label { color: #c9a84c; }
+.carta-us:hover { box-shadow: 0 20px 60px rgba(178,34,52,0.4); }
