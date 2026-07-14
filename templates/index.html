@@ -12,75 +12,35 @@
 
     <h2 class="bloque-titulo">Los Protagonistas</h2>
     <div class="cartas-grid">
-
-        <div class="carta-peleador carta-us">
-            <div class="carta-acento"></div>
-            <div class="carta-borde"></div>
-            <div class="carta-rating">95</div>
-            <img class="carta-foto" src="/assets/img/protagonistas/justin_gaethje.webp" alt="Justin Gaethje">
-            <div class="carta-overlay">
-                <div class="carta-pais">🇺🇸 ESTADOS UNIDOS</div>
-                <h3 class="carta-nombre">Justin Gaethje</h3>
-                <div class="carta-stats">
-                    <div class="carta-stat"><span class="carta-stat-valor">28-4</span><span class="carta-stat-label">Récord</span></div>
-                    <div class="carta-stat"><span class="carta-stat-valor">Ligero</span><span class="carta-stat-label">División</span></div>
-                    <div class="carta-stat"><span class="carta-stat-valor">Campeón</span><span class="carta-stat-label">UFC</span></div>
+        {% set todos = get_section(path="protagonistas/_index.md") %}
+        {% for slug in config.extra.home_protagonistas.slugs %}
+            {% for prot in todos.pages %}
+                {% if prot.slug == slug and prot.extra.foto %}
+                {% set clase_pais = "carta-us" %}
+                {% if prot.extra.nacionalidad is containing("Georgia") %}{% set clase_pais = "carta-ge" %}
+                {% elif prot.extra.nacionalidad is containing("México") %}{% set clase_pais = "carta-mx" %}
+                {% elif prot.extra.nacionalidad is containing("Irlanda") %}{% set clase_pais = "carta-ie" %}
+                {% elif prot.extra.nacionalidad is containing("Rusia") %}{% set clase_pais = "carta-ru" %}
+                {% elif prot.extra.nacionalidad is containing("Brasil") %}{% set clase_pais = "carta-br" %}
+                {% endif %}
+                <div class="carta-peleador {{ clase_pais }}">
+                    <div class="carta-acento"></div>
+                    <div class="carta-borde"></div>
+                    {% if prot.extra.rating %}<div class="carta-rating">{{ prot.extra.rating }}</div>{% endif %}
+                    <img class="carta-foto" src="/assets/img/protagonistas/{{ prot.extra.foto | replace(from='.jpg', to='.webp') }}" alt="{{ prot.title }}">
+                    <div class="carta-overlay">
+                        {% if prot.extra.bandera %}<div class="carta-pais">{{ prot.extra.bandera }} {{ prot.extra.nacionalidad | upper }}</div>{% endif %}
+                        <h3 class="carta-nombre">{{ prot.title }}</h3>
+                        <div class="carta-stats">
+                            {% if prot.extra.record %}<div class="carta-stat"><span class="carta-stat-valor">{{ prot.extra.record }}</span><span class="carta-stat-label">Récord</span></div>{% endif %}
+                            {% if prot.extra.categoria %}<div class="carta-stat"><span class="carta-stat-valor">{{ prot.extra.categoria }}</span><span class="carta-stat-label">División</span></div>{% endif %}
+                        </div>
+                    </div>
+                    <a href="{{ prot.permalink }}"></a>
                 </div>
-            </div>
-            <a href="/protagonistas/justin-gaethje/"></a>
-        </div>
-
-        <div class="carta-peleador carta-mx">
-            <div class="carta-acento"></div>
-            <div class="carta-borde"></div>
-            <div class="carta-rating">99</div>
-            <img class="carta-foto" src="/assets/img/protagonistas/canelo.webp" alt="Canelo Álvarez">
-            <div class="carta-overlay">
-                <div class="carta-pais">🇲🇽 MÉXICO</div>
-                <h3 class="carta-nombre">Canelo Álvarez</h3>
-                <div class="carta-stats">
-                    <div class="carta-stat"><span class="carta-stat-valor">61-2-2</span><span class="carta-stat-label">Récord</span></div>
-                    <div class="carta-stat"><span class="carta-stat-valor">Super Med.</span><span class="carta-stat-label">División</span></div>
-                    <div class="carta-stat"><span class="carta-stat-valor">Campeón</span><span class="carta-stat-label">Indiscutido</span></div>
-                </div>
-            </div>
-            <a href="/protagonistas/canelo-alvarez/"></a>
-        </div>
-
-        <div class="carta-peleador carta-us">
-            <div class="carta-acento"></div>
-            <div class="carta-borde"></div>
-            <div class="carta-rating">93</div>
-            <img class="carta-foto" src="/assets/img/protagonistas/max_holloway.webp" alt="Max Holloway">
-            <div class="carta-overlay">
-                <div class="carta-pais">🇺🇸 HAWÁI</div>
-                <h3 class="carta-nombre">Max Holloway</h3>
-                <div class="carta-stats">
-                    <div class="carta-stat"><span class="carta-stat-valor">26-7</span><span class="carta-stat-label">Récord</span></div>
-                    <div class="carta-stat"><span class="carta-stat-valor">Pluma</span><span class="carta-stat-label">División</span></div>
-                    <div class="carta-stat"><span class="carta-stat-valor">Leyenda</span><span class="carta-stat-label">UFC</span></div>
-                </div>
-            </div>
-            <a href="/protagonistas/max-holloway/"></a>
-        </div>
-
-        <div class="carta-peleador carta-ru">
-            <div class="carta-acento"></div>
-            <div class="carta-borde"></div>
-            <div class="carta-rating">96</div>
-            <img class="carta-foto" src="/assets/img/protagonistas/makhachev.webp" alt="Islam Makhachev">
-            <div class="carta-overlay">
-                <div class="carta-pais">🇷🇺 RUSIA</div>
-                <h3 class="carta-nombre">Islam Makhachev</h3>
-                <div class="carta-stats">
-                    <div class="carta-stat"><span class="carta-stat-valor">27-1</span><span class="carta-stat-label">Récord</span></div>
-                    <div class="carta-stat"><span class="carta-stat-valor">Ligero</span><span class="carta-stat-label">División</span></div>
-                    <div class="carta-stat"><span class="carta-stat-valor">Ex Campeón</span><span class="carta-stat-label">UFC</span></div>
-                </div>
-            </div>
-            <a href="/protagonistas/islam-makhachev/"></a>
-        </div>
-
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
     </div>
 
     <h2 class="bloque-titulo">En el Octágono</h2>
