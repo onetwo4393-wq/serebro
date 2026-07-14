@@ -19,3 +19,7 @@ theme = "catppuccin-mocha"
 
 [extra.home_protagonistas]
 slugs = ["justin-gaethje", "canelo-alvarez", "max-holloway", "islam-makhachev"]
+
+[extra.seccion_exclusiones]
+ufc = ["justin-gaethje", "max-holloway", "islam-makhachev"]
+boxeo = ["canelo-alvarez"]
