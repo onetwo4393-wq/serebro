@@ -124,7 +124,7 @@
         {% for page in seccion_ufc.pages | slice(end=3) %}
         <div class="tarjeta">
             <h4 class="tarjeta-titulo"><a href="{{ page.permalink }}">{{ page.title }}</a></h4>
-            <div class="tarjeta-fecha">{% if page.date %}{{ page.date | date(format="%d de %B, %Y") }}{% endif %}</div>
+            <div class="tarjeta-fecha">{% if page.date %}{{ macros::fecha_es(date=page.date) }}{% endif %}</div>
             <p class="tarjeta-desc">{% if page.description %}{{ page.description | truncate(length=120) }}{% endif %}</p>
         </div>
         {% endfor %}
@@ -136,7 +136,7 @@
         {% for page in seccion_boxeo.pages | slice(end=3) %}
         <div class="tarjeta">
             <h4 class="tarjeta-titulo"><a href="{{ page.permalink }}">{{ page.title }}</a></h4>
-            <div class="tarjeta-fecha">{% if page.date %}{{ page.date | date(format="%d de %B, %Y") }}{% endif %}</div>
+            <div class="tarjeta-fecha">{% if page.date %}{{ macros::fecha_es(date=page.date) }}{% endif %}</div>
             <p class="tarjeta-desc">{% if page.description %}{{ page.description | truncate(length=120) }}{% endif %}</p>
         </div>
         {% endfor %}
@@ -148,7 +148,7 @@
         {% for page in seccion_mma.pages | slice(end=3) %}
         <div class="tarjeta">
             <h4 class="tarjeta-titulo"><a href="{{ page.permalink }}">{{ page.title }}</a></h4>
-            <div class="tarjeta-fecha">{% if page.date %}{{ page.date | date(format="%d de %B, %Y") }}{% endif %}</div>
+            <div class="tarjeta-fecha">{% if page.date %}{{ macros::fecha_es(date=page.date) }}{% endif %}</div>
             <p class="tarjeta-desc">{% if page.description %}{{ page.description | truncate(length=120) }}{% endif %}</p>
         </div>
         {% endfor %}

@@ -8,7 +8,7 @@
             </span>
             <h1 class="nota-titulo">{{ page.title }}</h1>
             <div class="nota-fecha">
-                {% if page.date %}{{ page.date | date(format="%d de %B, %Y") }}{% endif %}
+                {% if page.date %}{{ macros::fecha_es(date=page.date) }}{% endif %}
             </div>
         </header>
         <div class="nota-contenido">

@@ -40,7 +40,7 @@
             {% if not page.extra.destacado %}
             <div class="tarjeta">
                 <h4 class="tarjeta-titulo"><a href="{{ page.permalink }}">{{ page.title }}</a></h4>
-                <div class="tarjeta-fecha">{{ page.date | date(format="%d de %B, %Y") }}</div>
+                <div class="tarjeta-fecha">{{ macros::fecha_es(date=page.date) }}</div>
                 <p class="tarjeta-desc">{{ page.description }}</p>
             </div>
             {% endif %}

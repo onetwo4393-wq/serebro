@@ -1,0 +1,16 @@
+{% macro fecha_es(date) %}
+{% set mes = date | date(format="%m") %}
+{% if mes == "01" %}{% set nombre = "enero" %}
+{% elif mes == "02" %}{% set nombre = "febrero" %}
+{% elif mes == "03" %}{% set nombre = "marzo" %}
+{% elif mes == "04" %}{% set nombre = "abril" %}
+{% elif mes == "05" %}{% set nombre = "mayo" %}
+{% elif mes == "06" %}{% set nombre = "junio" %}
+{% elif mes == "07" %}{% set nombre = "julio" %}
+{% elif mes == "08" %}{% set nombre = "agosto" %}
+{% elif mes == "09" %}{% set nombre = "septiembre" %}
+{% elif mes == "10" %}{% set nombre = "octubre" %}
+{% elif mes == "11" %}{% set nombre = "noviembre" %}
+{% else %}{% set nombre = "diciembre" %}{% endif %}
+{{ date | date(format="%d") }} de {{ nombre }}, {{ date | date(format="%Y") }}
+{% endmacro %}

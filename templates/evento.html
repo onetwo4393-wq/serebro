@@ -6,7 +6,7 @@
             <span class="etiqueta">Evento</span>
             <h1 class="nota-titulo">{{ page.title }}</h1>
             <div class="nota-fecha">
-                {% if page.extra.fecha_evento %}{{ page.extra.fecha_evento }}{% elif page.date %}{{ page.date | date(format="%d de %B, %Y") }}{% endif %}
+                {% if page.extra.fecha_evento %}{{ page.extra.fecha_evento }}{% elif page.date %}{{ macros::fecha_es(date=page.date) }}{% endif %}
                 {% if page.extra.lugar %} · {{ page.extra.lugar }}{% endif %}
             </div>
         </header>
