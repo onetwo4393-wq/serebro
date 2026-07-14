@@ -13,6 +13,7 @@ record = "22-6"
 rating = "95"
 foto = "conor.jpg"
 destacado = true
+disciplina = "ufc"
 +++
 
 Conor McGregor no es solo un peleador — es el hombre que convirtió las MMA en un fenómeno global. Si nunca viste una pelea de UFC en tu vida pero sabés quién es McGregor, eso resume todo.

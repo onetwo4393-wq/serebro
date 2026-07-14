@@ -9,6 +9,7 @@ nacionalidad = "Estados Unidos / Cuba"
 categoria = "Welter"
 record = "35-16"
 destacado = false
+disciplina = "ufc"
 +++
 
 Jorge "Gamebred" Masvidal es uno de los peleadores más populares en la historia de la UFC. Nacido en Miami de padres cubanos, Masvidal construyó su carrera desde los circuitos de pelea callejera y las organizaciones menores hasta convertirse en una superestrella global.

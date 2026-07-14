@@ -13,6 +13,7 @@ record = "16-0"
 rating = "97"
 foto = "topuria.jpg"
 destacado = true
+disciplina = "ufc"
 +++
 
 Ilia Topuria no es solo un campeón — es una historia de emigración, sacrificio y conquista. Nació en Georgia, creció en España, y le ganó al mundo entero dentro del octágono. Para los que no siguen las MMA: imaginate a un tipo que llegó de cero a un país extranjero y terminó siendo el mejor del planeta en su deporte.

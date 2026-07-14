@@ -8,6 +8,7 @@ description = "El mejor entrenador de boxeo del mundo. Arquitecto del éxito de 
 nacionalidad = "México"
 rol = "Entrenador / Promotor"
 destacado = false
+disciplina = "boxeo"
 +++
 
 Eddy Reynoso es el entrenador y mánager de Canelo Álvarez, y uno de los cerebros más respetados del boxeo mundial. Nombrado Entrenador del Año por la WBC en múltiples ocasiones, Reynoso ha construido un gimnasio de élite en San Diego que atrae a peleadores de todo el mundo.

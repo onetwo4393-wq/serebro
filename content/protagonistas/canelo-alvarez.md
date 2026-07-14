@@ -9,6 +9,7 @@ nacionalidad = "México"
 categoria = "Supermedianos / Semipesados"
 record = "61-2-2"
 destacado = true
+disciplina = "boxeo"
 +++
 
 Saúl "Canelo" Álvarez es considerado el mejor boxeador del mundo libra por libra. Oriundo de Guadalajara, México, construyó una carrera que lo llevó a conquistar títulos mundiales en cuatro divisiones diferentes.

@@ -13,6 +13,7 @@ record = "27-1"
 rating = "96"
 foto = "makhachev.jpg"
 destacado = false
+disciplina = "ufc"
 +++
 
 Islam Makhachev es el heredero directo de Khabib Nurmagomedov — entrenado por el mismo equipo, mismo estilo devastador, misma mentalidad implacable. Para los que no siguen las MMA: imaginate al mejor luchador del mundo que además sabe boxear.

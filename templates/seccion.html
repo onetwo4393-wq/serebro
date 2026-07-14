@@ -1,7 +1,51 @@
+{% import "macros.html" as macros %}
 {% extends "base.html" %}
 {% block content %}
 <div class="contenedor">
     <h1 class="seccion-titulo">{{ section.title }}</h1>
+
+    <!-- Cartas de protagonistas de esta disciplina -->
+    {% set disciplina = section.title | lower %}
+    {% set todos_protagonistas = get_section(path="protagonistas/_index.md") %}
+    {% set_global cartas_count = 0 %}
+    {% for prot in todos_protagonistas.pages %}
+        {% if prot.extra.disciplina == disciplina and prot.extra.foto and cartas_count < 3 %}
+        {% set_global cartas_count = cartas_count + 1 %}
+        {% endif %}
+    {% endfor %}
+
+    {% if cartas_count > 0 %}
+    <div class="cartas-grid" style="margin-bottom: 50px;">
+        {% set_global count = 0 %}
+        {% for prot in todos_protagonistas.pages %}
+            {% if prot.extra.disciplina == disciplina and prot.extra.foto and count < 3 %}
+            {% set_global count = count + 1 %}
+            {% set clase_pais = "carta-ge" %}
+            {% if prot.extra.nacionalidad is containing("México") %}{% set clase_pais = "carta-mx" %}
+            {% elif prot.extra.nacionalidad is containing("Irlanda") %}{% set clase_pais = "carta-ie" %}
+            {% elif prot.extra.nacionalidad is containing("Rusia") %}{% set clase_pais = "carta-ru" %}
+            {% endif %}
+            <div class="carta-peleador {{ clase_pais }}">
+                <div class="carta-acento"></div>
+                <div class="carta-borde"></div>
+                {% if prot.extra.rating %}<div class="carta-rating">{{ prot.extra.rating }}</div>{% endif %}
+                <img class="carta-foto" src="/assets/img/protagonistas/{{ prot.extra.foto | replace(from=".jpg", to=".webp") }}" alt="{{ prot.title }}">
+                <div class="carta-overlay">
+                    {% if prot.extra.bandera and prot.extra.nacionalidad %}
+                    <div class="carta-pais">{{ prot.extra.bandera }} {{ prot.extra.nacionalidad | upper }}</div>
+                    {% endif %}
+                    <h3 class="carta-nombre">{{ prot.title }}</h3>
+                    <div class="carta-stats">
+                        {% if prot.extra.record %}<div class="carta-stat"><span class="carta-stat-valor">{{ prot.extra.record }}</span><span class="carta-stat-label">Récord</span></div>{% endif %}
+                        {% if prot.extra.categoria %}<div class="carta-stat"><span class="carta-stat-valor">{{ prot.extra.categoria }}</span><span class="carta-stat-label">División</span></div>{% endif %}
+                    </div>
+                </div>
+                <a href="{{ prot.permalink }}"></a>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    {% endif %}
 
     <div class="layout-top">
         <!-- Hero: nota destacada -->
@@ -33,7 +77,6 @@
         </div>
     </div>
 
-    <!-- Grilla: resto de notas -->
     <h3 class="bloque-titulo">No te puedes perder</h3>
     <div class="grilla">
         {% for page in section.pages %}

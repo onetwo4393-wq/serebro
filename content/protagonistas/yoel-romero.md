@@ -9,6 +9,7 @@ nacionalidad = "Cuba"
 categoria = "Mediano / Semipesado"
 record = "15-6"
 destacado = false
+disciplina = "ufc"
 +++
 
 Yoel Romero es uno de los atletas más extraordinarios que ha pisado un octágono. Medallista de plata olímpico en lucha grecorromana en Sydney 2000, Romero llegó a las MMA con una base atlética incomparable y se convirtió en uno de los peleadores más temidos del peso mediano mundial.
