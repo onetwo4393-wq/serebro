@@ -21,5 +21,6 @@ theme = "catppuccin-mocha"
 slugs = ["justin-gaethje", "canelo-alvarez", "max-holloway", "islam-makhachev"]
 
 [extra.seccion_exclusiones]
-ufc = ["justin-gaethje", "max-holloway", "islam-makhachev"]
+ufc = ["justin-gaethje", "max-holloway", "islam-makhachev", "conor-mcgregor"]
 boxeo = ["canelo-alvarez"]
+
