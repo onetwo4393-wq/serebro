@@ -11,6 +11,16 @@
                 {% if page.date %}{{ macros::fecha_es(date=page.date) }}{% endif %}
             </div>
         </header>
+        {% if page.extra.youtube_id %}
+        <div class="nota-video">
+            <iframe
+                src="https://www.youtube.com/embed/{{ page.extra.youtube_id }}"
+                title="{{ page.title }}"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+        {% endif %}
         <div class="nota-contenido">
             {{ page.content | safe }}
         </div>

@@ -296,3 +296,28 @@ footer a:hover { text-decoration: underline; }
     font-size: 1.05rem;
     margin: 0;
 }
+
+/* Video embed en notas */
+.nota-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin: 30px 0;
+    overflow: hidden;
+}
+.nota-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Thumbnail en tarjetas */
+.tarjeta-thumb {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 12px;
+}
