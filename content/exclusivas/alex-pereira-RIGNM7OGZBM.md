@@ -1,6 +1,6 @@
 +++
 title = "¿PROSPERARA LA DEMANDA DE ALEX PEREIRA? Dimelo en los comentarios"
-date = NA--
+date = 2026-01-01
 template = "page.html"
 description = "Cobertura de Jorge Ebro sobre Pereira."
 [extra]

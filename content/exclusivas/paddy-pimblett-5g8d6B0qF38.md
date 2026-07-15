@@ -1,6 +1,6 @@
 +++
 title = "Paddy Pimblett DESTROYS in 52 seconds! 😱 Ready for something big?"
-date = NA--
+date = 2026-01-01
 template = "page.html"
 description = "Cobertura de Jorge Ebro sobre Pimblett."
 [extra]

@@ -1,6 +1,6 @@
 +++
-title = "THE END OF THE "PADDY PRIVILEGE"? 😱 Why is Benoit Saint Denis Pimblett's WORST nightmare?"
-date = NA--
+title = "THE END OF THE 'PADDY PRIVILEGE'? 😱 Why is Benoit Saint Denis Pimblett's WORST nightmare?"
+date = 2026-01-01
 template = "page.html"
 description = "Cobertura de Jorge Ebro sobre Pimblett."
 [extra]
