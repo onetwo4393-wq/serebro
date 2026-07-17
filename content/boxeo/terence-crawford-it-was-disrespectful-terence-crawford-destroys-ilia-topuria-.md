@@ -1,5 +1,5 @@
 +++
-title = "IT WAS DISRESPECTFUL: Terence Crawford destroys Ilia Topuria after his loss"
+title = "FUE UN IRRESPETO: Terence Crawford destruye a Topuria tras su derrota"
 date = 2026-07-14
 description = "Jorge Ebro analiza la reaccion de Terence Crawford tras la derrota de Topuria ante Gaethje."
 [extra]

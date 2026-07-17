@@ -6,7 +6,7 @@
 <div class="protagonista-hero" style="
     background: 
         linear-gradient(to right, rgba(10,8,6,0.92) 0%, rgba(10,8,6,0.5) 60%, transparent 100%),
-        {% if page.extra.foto %}url(/assets/img/protagonistas/{{ page.extra.foto }}){% else %}url(/assets/img/protagonistas/{{ page.slug }}.jpg){% endif %} center/cover no-repeat;
+        {% if page.extra.foto %}url(/assets/img/protagonistas/{{ page.extra.foto | replace(from='.jpg', to='.webp') }}){% else %}url(/assets/img/protagonistas/{{ page.slug }}.jpg){% endif %} center/cover no-repeat;
 ">
     <div class="protagonista-hero-contenido">
         <div class="protagonista-bandera">{{ page.extra.bandera | default(value="🏳️") }}</div>

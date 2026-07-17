@@ -23,7 +23,22 @@
                 <div class="carta-peleador {{ clase_pais }}">
                     <div class="carta-acento"></div>
                     <div class="carta-borde"></div>
-                    {% if prot.extra.rating %}<div class="carta-rating">{{ prot.extra.rating }}</div>{% endif %}
+                    {% if prot.extra.rating %}
+{% if prot.extra.disciplina != "boxeo" %}
+<div class="carta-rating-hex">
+<svg width="52" height="56" viewBox="0 0 52 56">
+<polygon points="26,1 51,14.5 51,41.5 26,55 1,41.5 1,14.5" fill="rgba(0,0,0,0.75)" stroke="rgba(201,168,76,0.6)" stroke-width="1"/>
+<text x="26" y="23" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" fill="rgba(201,168,76,0.7)" letter-spacing="2">OVR</text>
+<text x="26" y="41" text-anchor="middle" font-family="Georgia,serif" font-size="20" font-weight="900" fill="#e8c96a">{{ prot.extra.rating }}</text>
+</svg>
+</div>
+{% else %}
+<div class="carta-rating">
+<span class="carta-rating-ovr">OVR</span>
+<span class="carta-rating-num">{{ prot.extra.rating }}</span>
+</div>
+{% endif %}
+{% endif %}
                     <img class="carta-foto" src="/assets/img/protagonistas/{{ prot.extra.foto | replace(from='.jpg', to='.webp') }}" alt="{{ prot.title }}">
                     <div class="carta-overlay">
                         {% if prot.extra.bandera %}<div class="carta-pais">{{ prot.extra.bandera }} {{ prot.extra.nacionalidad | upper }}</div>{% endif %}

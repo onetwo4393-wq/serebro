@@ -1,5 +1,5 @@
 +++
-title = "Paddy Pimblett DESTROYS in 52 seconds! Ready for something big?"
+title = "Paddy Pimblett DESTRUYE en 52 segundos: Se viene algo grande?"
 date = 2026-07-14
 description = "Jorge Ebro analiza: Paddy Pimblett DESTROYS in 52 seconds! Ready for something big?."
 [extra]
