@@ -12,6 +12,8 @@
             </div>
         </header>
         {% if page.extra.youtube_id %}
+        <div style="padding: 28px 40px 0;">
+        <div class="nota-video-label">Análisis en video</div>
         <div class="nota-video">
             <iframe
                 src="https://www.youtube.com/embed/{{ page.extra.youtube_id }}"
@@ -19,6 +21,7 @@
                 frameborder="0"
                 allowfullscreen>
             </iframe>
+        </div>
         </div>
         {% endif %}
         <div class="nota-contenido">

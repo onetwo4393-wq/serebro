@@ -3,21 +3,10 @@
 {% block content %}
 <div class="contenedor">
     <h1 class="seccion-titulo">{{ section.title }}</h1>
-
     {% set disciplina = section.title | lower %}
     {% set todos_protagonistas = get_section(path="protagonistas/_index.md") %}
     {% set exclusiones = config.extra.seccion_exclusiones[disciplina] | default(value=[]) %}
 
-    {% set_global cartas_count = 0 %}
-    {% for prot in todos_protagonistas.pages %}
-        {% if prot.extra.disciplina == disciplina and prot.extra.foto and cartas_count < 3 %}
-            {% if prot.slug not in exclusiones %}
-                {% set_global cartas_count = cartas_count + 1 %}
-            {% endif %}
-        {% endif %}
-    {% endfor %}
-
-    {% if cartas_count > 0 %}
     <div class="cartas-grid" style="margin-bottom: 50px;">
         {% set_global count = 0 %}
         {% for prot in todos_protagonistas.pages %}
@@ -50,45 +39,20 @@
             {% endif %}
         {% endfor %}
     </div>
-    {% endif %}
 
-    <div class="layout-top">
-        <div>
-            {% set_global hero_impreso = false %}
-            {% for page in section.pages %}
-                {% if page.extra.destacado and not hero_impreso %}
-                <div class="hero-seccion">
-                    <span class="etiqueta">Destacado</span>
-                    <h2 class="hero-seccion-titulo"><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
-                    <p class="hero-seccion-desc">{{ page.description }}</p>
-                </div>
-                {% set_global hero_impreso = true %}
-                {% endif %}
-            {% endfor %}
-        </div>
-        <div class="sidebar">
-            <h3 class="sidebar-titulo">Top Stories</h3>
-            <ul class="lista-stories">
-                {% for page in section.pages | slice(end=4) %}
-                <li class="item-story">
-                    <div class="story-numero">{{ loop.index }}</div>
-                    <h4 class="story-titulo"><a href="{{ page.permalink }}">{{ page.title }}</a></h4>
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
-
-    <h3 class="bloque-titulo">No te puedes perder</h3>
+    <h3 class="bloque-titulo">Lo más visto</h3>
     <div class="grilla">
-        {% for page in section.pages %}
-            {% if not page.extra.destacado %}
-            <div class="tarjeta">
-                <h4 class="tarjeta-titulo"><a href="{{ page.permalink }}">{{ page.title }}</a></h4>
-                <div class="tarjeta-fecha">{{ macros::fecha_es(date=page.date) }}</div>
-                <p class="tarjeta-desc">{{ page.description }}</p>
-            </div>
+        {% for page in section.pages | slice(end=6) %}
+        <div class="tarjeta">
+            {% if page.extra.youtube_id %}
+            <a href="{{ page.permalink }}">
+                <img class="tarjeta-thumb" src="https://i.ytimg.com/vi/{{ page.extra.youtube_id }}/hqdefault.jpg" alt="{{ page.title }}">
+            </a>
             {% endif %}
+            <h4 class="tarjeta-titulo"><a href="{{ page.permalink }}">{{ page.title }}</a></h4>
+            <div class="tarjeta-fecha">{{ macros::fecha_es(date=page.date) }}</div>
+            <p class="tarjeta-desc">{{ page.description }}</p>
+        </div>
         {% endfor %}
     </div>
 </div>

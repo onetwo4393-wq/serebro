@@ -25,7 +25,7 @@
 /* --- RESET --- */
 *, *::before, *::after { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
-body { background-color: var(--bg-body); color: var(--text-main); font-family: var(--font-cuerpo); line-height: 1.6; }
+body { background-color: var(--bg-body); background-image: repeating-linear-gradient(45deg, transparent, transparent 23px, rgba(88,89,91,0.055) 23px, rgba(88,89,91,0.055) 24px); color: var(--text-main); font-family: var(--font-cuerpo); line-height: 1.6; }
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
 main { margin: 0; padding: 0; }
@@ -60,7 +60,7 @@ footer a:hover { text-decoration: underline; }
 .contenedor { max-width: var(--max-width); margin: 0 auto; padding: 40px 20px; }
 
 /* --- TIPOGRAFÍA --- */
-.seccion-titulo { font-family: var(--font-titulo); font-size: 3rem; text-transform: uppercase; border-bottom: 2px solid var(--border-light); padding-bottom: 10px; margin: 0 0 40px 0; color: var(--text-main); }
+.seccion-titulo { font-family: var(--font-titulo); font-size: 3rem; text-transform: uppercase; border-bottom: 2px solid var(--border-light); padding-bottom: 10px; margin: 0 0 40px 0; color: var(--text-main); text-align: center; }
 .bloque-titulo { font-family: var(--font-titulo); font-size: 2rem; text-transform: uppercase; border-bottom: 1px solid var(--border-light); padding-bottom: 10px; margin: 50px 0 30px 0; color: var(--text-main); }
 .etiqueta { background: var(--accent); color: #fff; padding: 4px 12px; font-family: var(--font-titulo); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; display: inline-block; }
 
@@ -109,11 +109,40 @@ footer a:hover { text-decoration: underline; }
 .story-titulo a:hover { color: var(--accent); }
 
 /* --- NOTA INDIVIDUAL --- */
-.nota-container { max-width: 800px; margin: 50px auto; padding: 0 20px; }
-.nota-header { margin-bottom: 40px; border-bottom: 2px solid var(--accent); padding-bottom: 20px; }
-.nota-titulo { font-family: var(--font-titulo); font-size: 3rem; text-transform: uppercase; margin: 15px 0; line-height: 1.1; color: var(--text-main); }
-.nota-fecha { color: var(--text-muted); font-size: 0.9rem; text-transform: uppercase; font-weight: 600; letter-spacing: 1px; }
-.nota-contenido { font-size: 1.1rem; line-height: 1.8; color: var(--text-muted); }
+.nota-container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+.nota-header {
+    margin-bottom: 0;
+    padding: 32px 40px 28px;
+    background: #1e1e1e;
+    position: relative;
+    border-left: 4px solid var(--accent);
+}
+.nota-titulo { font-family: var(--font-titulo); font-size: 2.6rem; text-transform: uppercase; margin: 14px 0 12px; line-height: 1.15; color: #F0E3CF; }
+.nota-fecha { color: #888; font-size: 0.85rem; text-transform: uppercase; font-weight: 600; letter-spacing: 1px; font-family: var(--font-cuerpo); }
+.nota-video-label {
+    font-family: var(--font-cuerpo);
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.nota-video-label::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 1px;
+    background: var(--accent);
+}
+.nota-contenido { font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); padding: 28px 40px 48px; }
+.nota-contenido p:first-child { border-left: 3px solid var(--accent); padding-left: 16px; font-style: italic; color: var(--text-main); }
 .nota-contenido p { margin-bottom: 25px; }
 .nota-contenido h2, .nota-contenido h3 { font-family: var(--font-titulo); text-transform: uppercase; color: var(--text-main); margin-top: 40px; margin-bottom: 15px; }
 
@@ -151,7 +180,7 @@ footer a:hover { text-decoration: underline; }
 .entrevista-titulo a:hover { color: var(--accent); }
 
 /* --- CARTAS PELEADORES --- */
-.cartas-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 25px; margin-top: 30px; }
+.cartas-grid { display: grid; grid-template-columns: repeat(3, minmax(260px, 340px)); gap: 25px; margin-top: 30px; justify-items: center; }
 .carta-peleador { position: relative; height: 420px; overflow: hidden; cursor: pointer; border-radius: 4px; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
 .carta-peleador:hover { transform: translateY(-10px) scale(1.02); }
 .carta-foto { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; filter: saturate(1.2) contrast(1.1); transition: transform 0.4s; }
