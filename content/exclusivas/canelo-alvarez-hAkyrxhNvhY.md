@@ -1,6 +1,6 @@
 +++
-title = "🥊 Canelo Álvarez breaks his silence about Cuban Osleys Iglesias"
-date = 2026-01-01
+title = "Canelo Alvarez rompe el silencio sobre el cubano Osleys Iglesias"
+date = 2026-07-17
 template = "page.html"
 description = "Cobertura de Jorge Ebro sobre Canelo."
 [extra]

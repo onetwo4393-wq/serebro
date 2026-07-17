@@ -1,6 +1,6 @@
 +++
-title = "🤫 'IT WAS DISRESPECTFUL': Terence Crawford destroys Ilia Topuria after his loss"
-date = 2026-01-01
+title = "FUE UN IRRESPETO: Terence Crawford destruye a Topuria tras su derrota"
+date = 2026-07-17
 template = "page.html"
 description = "Cobertura de Jorge Ebro sobre Crawford."
 [extra]

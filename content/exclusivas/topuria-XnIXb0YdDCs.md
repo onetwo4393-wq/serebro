@@ -1,6 +1,6 @@
 +++
-title = "WHAT HAPPENED HERE? 🏛️ Analyzing the keys to Ilia Topuria's DEFEAT against Justin Gaethje"
-date = 2026-01-01
+title = "QUE PASO AQUI? Las claves de la derrota de Topuria ante Gaethje"
+date = 2026-07-17
 template = "page.html"
 description = "Cobertura de Jorge Ebro sobre Topuria."
 [extra]

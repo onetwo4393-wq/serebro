@@ -1,6 +1,6 @@
 +++
-title = "Ilia Topuria and Miami: the champion trains in the City of the Sun to conquer the White House"
-date = 2026-01-01
+title = "Ilia Topuria y Miami: el campeon entrena en la Ciudad del Sol para conquistar la Casa Blanca"
+date = 2026-07-17
 template = "page.html"
 description = "Cobertura de Jorge Ebro sobre Topuria."
 [extra]

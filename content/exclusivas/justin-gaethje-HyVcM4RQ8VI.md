@@ -1,6 +1,6 @@
 +++
-title = "Javi Climent REVEALS how Ilia Topuria will destroy Justin Gaethje in the White House fight"
-date = 2026-01-01
+title = "Javi Climent REVELA como Topuria destruira a Gaethje en la pelea de la Casa Blanca"
+date = 2026-07-17
 template = "page.html"
 description = "Cobertura de Jorge Ebro sobre Gaethje."
 [extra]

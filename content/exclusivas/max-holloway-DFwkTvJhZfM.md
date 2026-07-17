@@ -1,6 +1,6 @@
 +++
-title = "Will the Weight Destroy Max? The 170-Pound Trap in McGregor vs. Holloway 2"
-date = 2026-01-01
+title = "El peso destruira a Max? La trampa de las 170 libras en McGregor vs Holloway 2"
+date = 2026-07-17
 template = "page.html"
 description = "Cobertura de Jorge Ebro sobre Holloway."
 [extra]

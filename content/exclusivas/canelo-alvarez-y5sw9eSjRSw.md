@@ -1,6 +1,6 @@
 +++
 title = "¿Miedo o Negocio? Benavidez DESTROZA al Zurdo y APUNTA a Canelo Álvarez"
-date = 2026-01-01
+date = 2026-07-17
 template = "page.html"
 description = "Cobertura de Jorge Ebro sobre Canelo."
 [extra]

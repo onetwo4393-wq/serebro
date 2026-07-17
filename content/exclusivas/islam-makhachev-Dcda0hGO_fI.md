@@ -1,6 +1,6 @@
 +++
-title = "Can Michael Morales KNOCK OUT Islam Makhachev? 🇪🇨 Gilbert Burns' PROPHECY"
-date = 2026-01-01
+title = "Puede Michael Morales noquear a Islam Makhachev? La PROFECIA de Gilbert Burns"
+date = 2026-07-17
 template = "page.html"
 description = "Cobertura de Jorge Ebro sobre Makhachev."
 [extra]

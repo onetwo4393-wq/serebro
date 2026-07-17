@@ -1,6 +1,6 @@
 +++
-title = "🚨 MY (SEMI) FINAL PREDICTIONS! 🥊 Who wins McGregor vs. Holloway at UFC 329?"
-date = 2026-01-01
+title = "MIS PREDICCIONES SEMIFINALES: Quien gana McGregor vs Holloway en UFC 329?"
+date = 2026-07-17
 template = "page.html"
 description = "Cobertura de Jorge Ebro sobre Holloway."
 [extra]

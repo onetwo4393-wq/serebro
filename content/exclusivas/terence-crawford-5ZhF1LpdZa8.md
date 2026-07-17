@@ -1,6 +1,6 @@
 +++
-title = "🥊 WILL THE KING RETURN? Jaron Ennis's victory ignites the final hope for Terence Crawford"
-date = 2026-01-01
+title = "VOLVERA EL REY? La victoria de Ennis enciende la ultima esperanza de Crawford"
+date = 2026-07-17
 template = "page.html"
 description = "Cobertura de Jorge Ebro sobre Crawford."
 [extra]

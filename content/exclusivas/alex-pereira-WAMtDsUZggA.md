@@ -1,6 +1,6 @@
 +++
-title = "⚔️ Is this an impossible fight for Pereira? Pay attention to what Francis Ngannou said ⚔️"
-date = 2026-01-01
+title = "Es esta una pelea imposible para Pereira? Escucha lo que dijo Francis Ngannou"
+date = 2026-07-17
 template = "page.html"
 description = "Cobertura de Jorge Ebro sobre Pereira."
 [extra]
