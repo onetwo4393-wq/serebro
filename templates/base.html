@@ -12,7 +12,13 @@
     <meta property="og:description" content="{% if page.description %}{{ page.description }}{% elif section.description %}{{ section.description }}{% else %}Periodismo de Boxeo y MMA con Jorge Ebro.{% endif %}">
     <meta property="og:url" content="{{ current_url | default(value=config.base_url) }}">
     <link rel="canonical" href="{{ current_url | default(value=config.base_url) }}">
+    {% if page.extra.foto %}
+    <meta property="og:image" content="{{ get_url(path='assets/img/protagonistas/' ~ page.extra.foto | replace(from='.jpg', to='.webp')) }}">
+    {% elif page.extra.youtube_id %}
+    <meta property="og:image" content="https://i.ytimg.com/vi/{{ page.extra.youtube_id }}/hqdefault.jpg">
+    {% else %}
     <meta property="og:image" content="{{ get_url(path='assets/img/jorge-ebro.webp') }}">
+    {% endif %}
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap">
