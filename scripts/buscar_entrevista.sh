@@ -1,4 +1,8 @@
 #!/bin/bash
+# buscar_entrevista.sh — SerEbro
+# Busca entrevistas de un peleador en el canal de Jorge Ebro.
+# Uso: ./scripts/buscar_entrevista.sh "Nombre Peleador"
+# Requiere: yt-dlp
 CANAL="https://www.youtube.com/@SerEbroEnlosDeportes"
 NOMBRE="${1}"
 

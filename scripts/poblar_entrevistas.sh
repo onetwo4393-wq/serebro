@@ -1,4 +1,8 @@
 #!/bin/bash
+# poblar_entrevistas.sh — SerEbro
+# Pobla content/exclusivas/ con entrevistas del canal de Jorge Ebro.
+# Uso: ./scripts/poblar_entrevistas.sh
+# Requiere: yt-dlp, python3
 CANAL="https://www.youtube.com/@SerEbroEnlosDeportes/videos"
 
 declare -A PELEADORES
