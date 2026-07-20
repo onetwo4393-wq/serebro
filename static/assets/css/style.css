@@ -20,6 +20,10 @@
     --max-width:      1300px;
     --font-titulo:    'Playfair Display', serif;
     --font-cuerpo:    'Inter', sans-serif;
+    --color-dorado:   var(--color-dorado);
+    --color-dorado-brillante: var(--color-dorado-brillante);
+    --color-header:   var(--color-header);
+    --color-blanco:   #ffffff;
 }
 
 /* --- RESET --- */
@@ -31,7 +35,7 @@ img { max-width: 100%; display: block; }
 main { margin: 0; padding: 0; }
 
 /* --- HEADER --- */
-header { background-color: #1e1e1e; width: 100%; border-bottom: 2px solid var(--accent); }
+header { background-color: var(--color-header); width: 100%; border-bottom: 2px solid var(--accent); }
 
 .header-container { max-width: var(--max-width); margin: 0 auto; padding: 25px 20px; display: flex; justify-content: space-between; align-items: center; }
 
@@ -119,7 +123,7 @@ footer a:hover { text-decoration: underline; }
 .nota-header {
     margin-bottom: 0;
     padding: 32px 40px 28px;
-    background: #1e1e1e;
+    background: var(--color-header);
     position: relative;
     border-left: 4px solid var(--accent);
 }
@@ -152,14 +156,14 @@ footer a:hover { text-decoration: underline; }
 .protagonista-hero { min-height: 80vh; display: flex; align-items: flex-end; padding: 60px 40px; }
 .protagonista-hero-contenido { max-width: var(--max-width); margin: 0 auto; width: 100%; }
 .protagonista-bandera { font-size: 4rem; line-height: 1; margin-bottom: 10px; }
-.protagonista-pais-label { font-family: var(--font-cuerpo); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 4px; color: #c9a84c; font-weight: 700; margin-bottom: 10px; }
+.protagonista-pais-label { font-family: var(--font-cuerpo); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 4px; color: var(--color-dorado); font-weight: 700; margin-bottom: 10px; }
 .protagonista-nombre { font-family: var(--font-titulo); font-size: 5rem; color: #F0E3CF; line-height: 1; margin: 0 0 10px 0; text-shadow: 0 4px 20px rgba(0,0,0,0.8); }
-.protagonista-apodo { font-family: var(--font-titulo); font-size: 1.5rem; color: #c9a84c; font-style: italic; margin-bottom: 30px; }
+.protagonista-apodo { font-family: var(--font-titulo); font-size: 1.5rem; color: var(--color-dorado); font-style: italic; margin-bottom: 30px; }
 .protagonista-stats-bar { display: flex; gap: 40px; border-top: 1px solid rgba(240,227,207,0.2); padding-top: 20px; margin-top: 20px; }
 .pstat { text-align: left; }
 .pstat-val { font-family: var(--font-titulo); font-size: 1.8rem; color: #F0E3CF; display: block; line-height: 1; }
-.pstat-label { font-family: var(--font-cuerpo); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; color: #c9a84c; display: block; margin-top: 5px; }
-.pstat-rating .pstat-val { color: #c9a84c; font-size: 2.5rem; }
+.pstat-label { font-family: var(--font-cuerpo); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; color: var(--color-dorado); display: block; margin-top: 5px; }
+.pstat-rating .pstat-val { color: var(--color-dorado); font-size: 2.5rem; }
 
 /* --- PROTAGONISTA LAYOUT --- */
 .protagonista-layout { display: grid; grid-template-columns: 1.5fr 1fr; gap: 60px; margin-top: 50px; }
@@ -245,8 +249,8 @@ footer a:hover { text-decoration: underline; }
 }
 
 .carta-us .carta-acento { background: linear-gradient(135deg, #b22234, #ffffff, #3c3b6e); }
-.carta-us .carta-pais { color: #c9a84c; }
-.carta-us .carta-stat-label { color: #c9a84c; }
+.carta-us .carta-pais { color: var(--color-dorado); }
+.carta-us .carta-stat-label { color: var(--color-dorado); }
 .carta-us:hover { box-shadow: 0 20px 60px rgba(178,34,52,0.4); }
 
 /* --- COMING SOON --- */
@@ -387,7 +391,7 @@ footer a:hover { text-decoration: underline; }
     font-family: var(--font-titulo);
     font-size: 22px;
     font-weight: 900;
-    color: #e8c96a;
+    color: var(--color-dorado-brillante);
     line-height: 1;
 }
 .carta-peleador:hover .carta-rating {
