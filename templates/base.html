@@ -11,6 +11,7 @@
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% elif section.title %}{{ section.title }}{% else %}Ser Ebro En Los Deportes{% endif %}">
     <meta property="og:description" content="{% if page.description %}{{ page.description }}{% elif section.description %}{{ section.description }}{% else %}Periodismo de Boxeo y MMA con Jorge Ebro.{% endif %}">
     <meta property="og:url" content="{{ current_url }}">
+    <link rel="canonical" href="{{ current_url }}">
     <meta property="og:image" content="{{ get_url(path='assets/img/jorge-ebro.webp') }}">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
