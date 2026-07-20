@@ -4,3 +4,9 @@
 
 [build.environment]
   ZOLA_VERSION = "0.22.1"
+
+[[redirects]]
+  from = "/*"
+  to = "/:splat/index.html"
+  status = 200
+  force = false
