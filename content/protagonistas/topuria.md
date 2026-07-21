@@ -2,7 +2,7 @@
 title = "Ilia Topuria"
 date = 2026-07-09
 template = "protagonista.html"
-description = "Campeón indiscutido de peso ligero de la UFC. El Georgian Nightmare que conquistó Las Vegas."
+description = "El Georgian Nightmare. Ex campeón indiscutido de peso ligero de la UFC. Cayó ante Gaethje en UFC Freedom 250 y busca su regreso al título."
 
 [extra]
 nacionalidad = "Georgia / España"

@@ -2,13 +2,13 @@
 title = "Terence Crawford"
 date = 2026-07-12
 template = "protagonista.html"
-description = "Bud. El mejor boxeador welter del mundo. Campeón indiscutido que venció a todos los que se pusieron enfrente."
+description = "Bud. Campeón indiscutido de supermediano. Venció a Canelo Álvarez en septiembre de 2025 y es el único boxeador en lograr el estatus indiscutido en tres divisiones."
 [extra]
 nacionalidad = "Estados Unidos"
 bandera = "🇺🇸"
 apodo = "Bud"
-categoria = "Welter"
-record = "41-0"
+categoria = "Supermediano"
+record = "42-0"
 rating = "97"
 foto = "terrence_crawford.jpg"
 disciplina = "boxeo"

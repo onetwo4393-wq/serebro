@@ -2,14 +2,14 @@
 title = "Islam Makhachev"
 date = 2026-07-07
 template = "protagonista.html"
-description = "El sucesor de Khabib. Campeón dominante de peso ligero de la UFC y el peleador más completo del mundo."
+description = "El sucesor de Khabib. Campeón de peso wélter de la UFC tras vaciar el título ligero en 2025. El peleador más completo del mundo."
 
 [extra]
 nacionalidad = "Rusia / Daguestán"
 bandera = "🇷🇺"
-apodo = "El Sucesor"
-categoria = "Peso Ligero"
-record = "27-1"
+apodo = "The Successor"
+categoria = "Peso Wélter"
+record = "28-1"
 rating = "96"
 foto = "makhachev.jpg"
 destacado = false

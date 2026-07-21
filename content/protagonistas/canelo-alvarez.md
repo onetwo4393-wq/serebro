@@ -7,7 +7,7 @@ description = "El mejor boxeador libra por libra del mundo. Campeón indiscutido
 [extra]
 nacionalidad = "México"
 categoria = "Supermedianos / Semipesados"
-record = "61-2-2"
+record = "62-3-2"
 destacado = true
 disciplina = "boxeo"
 rating = 98

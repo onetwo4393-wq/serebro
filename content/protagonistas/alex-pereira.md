@@ -2,13 +2,13 @@
 title = "Alex Pereira"
 date = 2026-07-14
 template = "protagonista.html"
-description = "Poatan. Campeón de kickboxing y UFC. El único peleador que venció a Adesanya tres veces y dominó dos divisiones."
+description = "Poatan. Ex campeón de dos divisiones en la UFC. Intentó conquistar el pesado ante Gane en UFC Freedom 250 y cayó por TKO en el segundo round."
 [extra]
 nacionalidad = "Brasil"
 bandera = "🇧🇷"
 apodo = "Poatan"
 categoria = "Semipesado / Pesado"
-record = "12-3"
+record = "13-4"
 rating = "94"
 foto = "alex_pereira.jpg"
 disciplina = "ufc"
