@@ -20,9 +20,9 @@
     --max-width:      1300px;
     --font-titulo:    'Playfair Display', serif;
     --font-cuerpo:    'Inter', sans-serif;
-    --color-dorado:   var(--color-dorado);
-    --color-dorado-brillante: var(--color-dorado-brillante);
-    --color-header:   var(--color-header);
+    --color-dorado:   #c9a84c;
+    --color-dorado-brillante: #e8c96a;
+    --color-header:   #1e1e1e;
     --color-blanco:   #ffffff;
 }
 
