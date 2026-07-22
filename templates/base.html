@@ -23,6 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" id="dark-mode-css" href="/assets/css/dark-mode.css" disabled>
 </head>
 <body class="{% block body_class %}{% endblock %}">
     <header>
@@ -40,7 +41,7 @@
             <nav class="nav-bloque nav-der" aria-label="Navegación secundaria">
                 <a href="/contacto/">Contacto</a>
                 <a href="/sobre-jorge/">Sobre Jorge</a>
-                <button class="theme-toggle" onclick="document.body.classList.toggle('light-mode')">Tema</button>
+                <button class="theme-toggle" onclick="const s=document.getElementById('dark-mode-css');s.disabled=!s.disabled;this.textContent=s.disabled?'🌙':'☀️'">Tema</button>
             </nav>
         </div>
     </header>

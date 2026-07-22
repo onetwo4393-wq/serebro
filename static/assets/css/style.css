@@ -48,7 +48,7 @@ header { background-color: var(--color-header); width: 100%; border-bottom: 2px 
 
 nav a { color: #F0E3CF; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; transition: all 0.2s; padding: 6px 14px; border: 1px solid rgba(240,227,207,0.2); border-radius: 2px; }
 nav a:hover { color: #F0E3CF; border-color: rgba(240,227,207,0.6); background: rgba(240,227,207,0.05); }
-.theme-toggle { display: none; }
+.theme-toggle { display: inline-block; background: none; border: 1px solid rgba(240,227,207,0.4); border-radius: 2px; color: #F0E3CF; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; padding: 6px 14px; cursor: pointer; }
 
 /* --- HEADER TRANSPARENTE SOLO EN HOME --- */
 body.home header { position: absolute; background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, transparent 100%); border-bottom: none; z-index: 100; }

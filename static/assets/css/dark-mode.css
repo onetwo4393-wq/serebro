@@ -1,0 +1,87 @@
+/* ============================================================
+   DARK MODE — Overrides de color (Córner Rojo)
+   Incluir DESPUÉS de tu style.css principal.
+   Solo toca color/paleta — no cambia tipografía ni textos.
+   ============================================================ */
+
+/* --- 1. Variables de color --- */
+:root {
+    --bg-body:        #0d0d0f;
+    --bg-card:        #18181c;
+    --bg-header:      #000000;
+    --bg-dark:        #000000;
+    --text-main:      #f5f1e8;
+    --text-muted:     #9a958c;
+    --text-over-dark: #f5f1e8;
+    --accent:         #ff2b3d;
+    --accent-hover:   #d4162b;
+    --border-subtle:  #2a2a30;
+    --border-light:   #35353c;
+    --color-dorado:            #f2b705;
+    --color-dorado-brillante:  #ffd23f;
+    --color-header:   #000000;
+}
+
+/* --- 2. Reglas con color hardcodeado que no siguen las variables ---
+   Estas solo aplican si tu HTML usa las mismas clases que el proyecto
+   de referencia (nav, tarjetas de peleadores, hero, etc). Ajustá los
+   selectores si tus nombres de clase son distintos. --- */
+
+body {
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 23px, rgba(255,255,255,0.035) 23px, rgba(255,255,255,0.035) 24px);
+}
+
+nav a {
+    color: #f5f1e8;
+    border: 1px solid rgba(245,241,232,0.2);
+}
+nav a:hover {
+    color: #f5f1e8;
+    border-color: rgba(245,241,232,0.6);
+    background: rgba(245,241,232,0.05);
+}
+body.home nav a {
+    border-color: rgba(245,241,232,0.4) !important;
+}
+
+.hero-home {
+    background: linear-gradient(to right, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.25) 100%),
+                url(/assets/img/hero/estructura_auto.webp) center/cover no-repeat;
+}
+
+.hero-seccion {
+    background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 100%), #0d0d0f;
+}
+.hero-seccion-desc { color: var(--text-muted); }
+
+.nota-titulo { color: var(--text-over-dark); }
+.nota-fecha { color: var(--text-muted); }
+
+.item-story { border-bottom: 1px solid rgba(245,241,232,0.15); }
+
+.protagonista-nombre { color: var(--text-over-dark); }
+.protagonista-stats-bar { border-top: 1px solid rgba(245,241,232,0.2); }
+.pstat-val { color: var(--text-over-dark); }
+
+.entrevista-play { background: rgba(255,43,61,0.7); }
+
+.carta-nombre { color: var(--text-over-dark); }
+.carta-stats { border-top: 1px solid rgba(242,183,5,0.3); }
+.carta-stat { border-right: 1px solid rgba(242,183,5,0.2); }
+.carta-stat-valor { color: var(--text-over-dark); }
+.carta-borde { border: 1px solid rgba(242,183,5,0.2); }
+.carta-peleador:hover .carta-borde { border-color: rgba(242,183,5,0.6); }
+.carta-rating { background: rgba(242,183,5,0.9); }
+.carta-rating-ovr { color: rgba(242,183,5,0.7); }
+.carta-rating-num { color: var(--color-dorado-brillante); }
+
+.coming-soon-desc { color: var(--text-muted); }
+.coming-soon-banner-contenido p { color: var(--text-muted); }
+
+/* --- 3. SVG inline (badge hexagonal MMA) ---
+   Si tu HTML trae fill/stroke inline en el <svg> (como en este proyecto),
+   una regla CSS pisa esos atributos de presentación. Ajustá el selector
+   al contenedor real de tu SVG. --- */
+.carta-rating-hex polygon { stroke: rgba(242,183,5,0.6) !important; }
+.carta-rating-hex text:first-of-type { fill: rgba(242,183,5,0.7) !important; }
+.carta-rating-hex text:last-of-type { fill: var(--color-dorado-brillante) !important; }
