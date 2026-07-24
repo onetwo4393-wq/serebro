@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash(zola serve *)",
+      "Bash(curl -s http://localhost:8080/)",
+      "Bash(zola build *)",
+      "Bash(curl -s http://127.0.0.1:9999/)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git commit --allow-empty *)",
+      "Bash(git config *)",
+      "Bash(git ls-files *)",
+      "Bash(git show-branch *)",
+      "Bash(git branch *)",
+      "Bash(git branch -D *)",
+      "Bash(git commit *)",
+      "Bash(git status *)",
+      "Bash(git log *)",
+      "Bash(git diff *)",
+      "Bash(find *)",
+      "Bash(grep *)",
+      "Bash(git remote *)"
+    ]
+  }
+}
