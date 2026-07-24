@@ -27,21 +27,27 @@
 </head>
 <body class="{% block body_class %}{% endblock %}">
     <header>
+        <div class="header-top-bar"></div>
         <div class="header-container">
-            <nav class="nav-bloque" aria-label="Navegación principal">
-                
-                <a href="/mma/">MMA</a>
-                <a href="/boxeo/">Boxeo</a>
-                <a href="/ufc/">UFC</a>
+            <nav class="nav-izq" aria-label="Navegación principal">
+                <a href="/mma/" class="nav-link">MMA</a>
+                <a href="/boxeo/" class="nav-link">Boxeo</a>
+                <a href="/ufc/" class="nav-link">UFC</a>
             </nav>
+
             <div class="logo-centro">
-                <a href="/" class="logo">Ser Ebro</a>
+                <a href="/" class="logo-main">
+                    <span class="logo-line-top"></span>
+                    <span class="logo-text">Ser Ebro</span>
+                    <span class="logo-line-bottom"></span>
+                </a>
                 <span class="logo-sub">En Los Deportes</span>
             </div>
-            <nav class="nav-bloque nav-der" aria-label="Navegación secundaria">
-                <a href="/contacto/">Contacto</a>
-                <a href="/sobre-jorge/">Sobre Jorge</a>
-                <button class="theme-toggle" onclick="const s=document.getElementById('dark-mode-css');s.disabled=!s.disabled;this.textContent=s.disabled?'🌙':'☀️'">Tema</button>
+
+            <nav class="nav-der" aria-label="Navegación secundaria">
+                <a href="/sobre-jorge/" class="nav-link">Sobre Jorge</a>
+                <a href="/contacto/" class="nav-link">Contacto</a>
+                <button class="theme-toggle" aria-label="Cambiar tema" onclick="const s=document.getElementById('dark-mode-css');s.disabled=!s.disabled;this.textContent=s.disabled?'🌙':'☀️'">🌙</button>
             </nav>
         </div>
     </header>

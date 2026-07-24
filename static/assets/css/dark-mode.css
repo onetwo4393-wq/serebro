@@ -31,17 +31,40 @@ body {
     background-image: repeating-linear-gradient(45deg, transparent, transparent 23px, rgba(255,255,255,0.035) 23px, rgba(255,255,255,0.035) 24px);
 }
 
-nav a {
-    color: #f5f1e8;
-    border: 1px solid rgba(245,241,232,0.2);
+header {
+    background: linear-gradient(135deg, #0a0a0c 0%, #151517 50%, #0a0a0c 100%);
 }
-nav a:hover {
+
+.logo-text {
     color: #f5f1e8;
-    border-color: rgba(245,241,232,0.6);
-    background: rgba(245,241,232,0.05);
 }
-body.home nav a {
-    border-color: rgba(245,241,232,0.4) !important;
+
+.logo-main:hover .logo-text {
+    color: var(--color-dorado-brillante);
+}
+
+.theme-toggle {
+    border-color: var(--color-dorado);
+}
+
+.theme-toggle:hover {
+    border-color: var(--color-dorado-brillante);
+}
+
+.nav-link {
+    color: #f5f1e8;
+    border: 1px solid transparent;
+}
+.nav-link:hover {
+    color: #0d0d0f;
+    border-color: var(--color-dorado);
+    background: rgba(242, 183, 5, 0.15);
+}
+body.home .nav-link {
+    border-color: rgba(245,241,232,0.3) !important;
+}
+body.home .nav-link:hover {
+    border-color: rgba(245,241,232,0.8) !important;
 }
 
 .hero-home {
