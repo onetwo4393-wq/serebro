@@ -108,3 +108,42 @@ body.home .nav-link:hover {
 .carta-rating-hex polygon { stroke: rgba(242,183,5,0.6) !important; }
 .carta-rating-hex text:first-of-type { fill: rgba(242,183,5,0.7) !important; }
 .carta-rating-hex text:last-of-type { fill: var(--color-dorado-brillante) !important; }
+
+/* --- 4. Responsive adaptado para dark mode --- */
+
+/* TABLET: 768px */
+@media (max-width: 768px) and (min-width: 601px) {
+    .hero-home h1 { color: #f5f1e8; }
+    .logo-text { font-size: 1.8rem; }
+}
+
+/* MOBILE: 600px */
+@media (max-width: 600px) {
+    .hero-home h1 {
+        font-size: 1.8rem;
+        color: #f5f1e8;
+    }
+    .hero-seccion-titulo {
+        color: #f5f1e8;
+        font-size: 1.5rem;
+    }
+    .seccion-titulo {
+        color: #f5f1e8;
+        font-size: 1.6rem;
+    }
+    .logo-text {
+        color: #f5f1e8;
+        font-size: 1.5rem;
+    }
+    .logo-sub {
+        font-size: 0.55rem;
+    }
+    .carta-nombre {
+        font-size: 1.2rem;
+    }
+}
+
+/* DESKTOP: 1024px+ */
+@media (min-width: 1024px) {
+    .hero-home h1 { color: #f5f1e8; }
+}
