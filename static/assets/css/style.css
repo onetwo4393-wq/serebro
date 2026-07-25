@@ -461,36 +461,65 @@ footer a:hover { text-decoration: underline; }
     /* Altura reducida para cartas */
     .carta-peleador { height: 280px; }
 
-    /* Header adaptado — stack vertical en móvil */
+    /* Header adaptado — STACK VERTICAL EN MÓVIL */
     .header-container {
-        flex-direction: column;
-        gap: 12px;
-        padding: 20px 10px;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 8px !important;
+        padding: 15px 10px !important;
     }
 
     .logo-centro {
-        width: 100%;
         order: -1;
+        width: 100% !important;
+        margin-bottom: 5px;
+        flex: none !important;
     }
 
-    .nav-izq, .nav-der {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 8px;
+    .nav-izq {
+        flex-direction: row !important;
+        width: 100% !important;
+        flex: none !important;
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+        align-items: center !important;
+    }
+
+    .nav-der {
+        flex-direction: row !important;
+        width: 100% !important;
+        flex: none !important;
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+        align-items: center !important;
     }
 
     .nav-link {
-        font-size: 12px;
-        padding: 4px 10px;
-        margin: 2px;
+        font-size: 12px !important;
+        padding: 4px 8px !important;
+        margin: 2px !important;
     }
 
-    .logo-line-top, .logo-line-bottom { width: 25px; }
+    .logo-text {
+        font-size: 1.8rem !important;
+    }
+
+    .logo-sub {
+        font-size: 0.6rem !important;
+    }
+
+    .logo-line-top, .logo-line-bottom {
+        width: 25px !important;
+    }
 
     .theme-toggle {
-        padding: 6px 10px;
-        width: auto;
+        font-size: 12px !important;
+        padding: 4px 8px !important;
+        width: auto !important;
     }
 }
 
