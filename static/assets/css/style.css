@@ -410,6 +410,9 @@ footer a:hover { text-decoration: underline; }
     .hero-home { padding: 50px 30px; }
     .hero-seccion { padding: 40px 30px; }
     body.home .hero-home { padding-top: 140px; }
+    .carta-peleador { height: 350px; }
+    .contenedor { padding: 30px 20px; }
+    .grilla { gap: 20px; }
 }
 
 /* MOBILE: 600px y menor */
