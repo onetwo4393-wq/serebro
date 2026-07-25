@@ -450,7 +450,7 @@ footer a:hover { text-decoration: underline; }
     .footer { padding: 25px 15px; margin-top: 50px; }
 
     /* Grillas en una columna */
-    .cartas-grid-home { grid-template-columns: repeat(2, 1fr); }
+    .cartas-grid-home { grid-template-columns: repeat(2, 1fr) !important; }
     .grilla { grid-template-columns: 1fr; }
     .cartas-grid { grid-template-columns: 1fr; }
     .layout-top { grid-template-columns: 1fr; }
