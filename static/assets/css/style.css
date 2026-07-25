@@ -396,29 +396,64 @@ footer a:hover { text-decoration: underline; }
 .carta-ru:hover { box-shadow: 0 20px 60px rgba(0,57,166,0.4); }
 
 /* --- RESPONSIVE --- */
-@media (max-width: 900px) {
-    .header-container {
-        flex-wrap: wrap;
-        gap: 20px;
-        padding: 20px;
-    }
-    .nav-izq, .nav-der { width: 100%; justify-content: center; flex-wrap: wrap; }
-    .layout-top { grid-template-columns: 1fr; }
-    .protagonista-layout { grid-template-columns: 1fr; }
-    .hero-home h1 { font-size: 2.8rem; }
-    .hero-seccion-titulo { font-size: 2.2rem; }
-    .seccion-titulo { font-size: 2.2rem; }
-    .nota-titulo { font-size: 2.2rem; }
-    .perfil-nombre { font-size: 2.5rem; }
-    .protagonista-nombre { font-size: 3rem; }
-    .protagonista-hero { padding: 40px 20px; }
+
+/* TABLET: 768px (modo horizontal) */
+@media (max-width: 768px) and (min-width: 601px) {
+    .cartas-grid-home { grid-template-columns: repeat(2, 1fr); }
+    .cartas-grid { grid-template-columns: repeat(2, minmax(200px, 1fr)); }
+    .hero-home h1 { font-size: 2.2rem; }
+    .hero-seccion-titulo { font-size: 2rem; }
+    .seccion-titulo { font-size: 2rem; }
+    .nota-titulo { font-size: 2rem; }
+    .logo-text { font-size: 1.8rem; }
+    .nav-link { font-size: 11px; }
+    .hero-home { padding: 50px 30px; }
+    .hero-seccion { padding: 40px 30px; }
+    body.home .hero-home { padding-top: 140px; }
 }
 
+/* MOBILE: 600px y menor */
 @media (max-width: 600px) {
-    .hero-home { padding: 40px 20px; }
-    .hero-seccion { padding: 30px 20px; min-height: 300px; }
+    /* Tipografía reducida para móvil */
+    .hero-home h1 { font-size: 1.8rem; }
+    .hero-seccion-titulo { font-size: 1.5rem; }
+    .seccion-titulo { font-size: 1.6rem; }
+    .bloque-titulo { font-size: 1.3rem; }
+    .nota-titulo { font-size: 1.5rem; }
+    .perfil-nombre { font-size: 1.8rem; }
+    .protagonista-nombre { font-size: 1.8rem; }
+    .carta-nombre { font-size: 1.2rem; }
+    .logo-text { font-size: 1.5rem; }
+    .logo-sub { font-size: 0.55rem; }
+    .nav-link { font-size: 10px; }
+    .tarjeta-titulo { font-size: 1.1rem; }
+
+    /* Paddings reducidos */
+    .hero-home { padding: 30px 15px; }
+    body.home .hero-home { padding-top: 100px; }
+    .hero-seccion { padding: 25px 15px; min-height: 300px; }
+    .protagonista-hero { padding: 30px 15px; }
+    .contenedor { padding: 25px 15px; }
+    .bloque-titulo { margin: 30px 0 20px; }
+    .tarjeta { padding: 20px; }
+
+    /* Grillas en una columna */
+    .cartas-grid-home { grid-template-columns: 1fr; }
     .grilla { grid-template-columns: 1fr; }
     .cartas-grid { grid-template-columns: 1fr; }
+    .layout-top { grid-template-columns: 1fr; }
+    .protagonista-layout { grid-template-columns: 1fr; }
+
+    /* Altura reducida para cartas */
+    .carta-peleador { height: 280px; }
+
+    /* Header adaptado */
+    .header-container {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 15px;
+    }
+    .nav-izq, .nav-der { width: 100%; justify-content: center; flex-wrap: wrap; }
 }
 
 .carta-us .carta-acento { background: linear-gradient(135deg, #b22234, #ffffff, #3c3b6e); }
@@ -598,4 +633,10 @@ footer a:hover { text-decoration: underline; }
     60%, 78%  { background-image: linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, transparent 40%), url(/assets/img/hero/estructura.webp); }
     80%, 98%  { background-image: linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, transparent 40%), url(/assets/img/hero/estructura_audo.webp); }
     100%      { background-image: linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, transparent 40%), url(/assets/img/hero/estructura_auto.webp); }
+}
+
+/* DESKTOP: 1024px y mayor */
+@media (min-width: 1024px) {
+    .cartas-grid-home { grid-template-columns: repeat(4, 1fr); }
+    body.home .hero-home { padding-top: 180px; }
 }
