@@ -654,4 +654,9 @@ footer a:hover { text-decoration: underline; }
 @media (min-width: 1024px) {
     .cartas-grid-home { grid-template-columns: repeat(4, 1fr); }
     body.home .hero-home { padding-top: 180px; }
+    .hero-home { padding: 80px 60px; }
+    .hero-seccion { padding: 50px 40px; }
+    .contenedor { padding: 40px 20px; }
+    .carta-peleador { height: 420px; }
+    .bloque-titulo { margin: 50px 0 30px 0; }
 }
