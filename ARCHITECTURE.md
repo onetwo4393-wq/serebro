@@ -17,7 +17,18 @@ Cambios que no son triviales van aquí. Esto guía decisiones futuras.
 - Tablet: `140px`
 - Mobile: `210px`
 
-**Riesgo:** Cambios en altura del header rompen estos valores. Ajustar si header crece o achica.
+**Acoplamiento:** Cambios en altura del header rompen layout del hero SILENCIOSAMENTE (sin error visible).
+- Si agregas padding/margin al header, ajusta padding-top del hero
+- Si cambias font-size del logo, recalcula
+- Si cambias spacing entre nav items, verifica hero no se superpone
+- **Verificación:** En DevTools, viewport mobile (375px), confirmar que "EL RADAR" (primer elemento hero) no está bajo header
+
+**Cómo calcular:**
+```
+Logo height (1.5rem) + Logo subtitle (0.6rem) + padding + gaps + nav
+≈ 100-120px. Suma 60-90px de margen de seguridad.
+Valores: Desktop 180px, Tablet 140px, Mobile 210px
+```
 
 ---
 
@@ -33,6 +44,39 @@ Cambios que no son triviales van aquí. Esto guía decisiones futuras.
 **Por qué:** Coincide con viewport common; mobile-first es patrón estándar.
 
 **Implicación:** Cambios CSS deben estar en media queries correctas.
+
+---
+
+### 2.1. ⚠️ CSS Cascade en Media Queries (Patrón Silencioso)
+
+**Problema:** Media query y regla base tienen la MISMA especificidad. El que viene DESPUÉS en el archivo gana.
+
+**Ejemplo real (ocurrió):**
+```css
+@media (max-width: 600px) {
+  .cartas-grid-home { grid-template-columns: repeat(2, 1fr); }  /* Línea 453 */
+}
+
+/* ... más CSS ... */
+
+.cartas-grid-home { grid-template-columns: repeat(4, 1fr); }  /* Línea 631 - ESTO GANA */
+```
+
+**Síntoma:** Media query no aplica. Cambios responsivos no funcionan. Parece magia.
+
+**Solución:**
+1. **!important en media query** (rápida):
+```css
+@media (max-width: 600px) {
+  .cartas-grid-home { grid-template-columns: repeat(2, 1fr) !important; }
+}
+```
+
+2. **O reestructurar archivo** (limpio): Mover media queries al FINAL del archivo
+
+**Cuándo aplicar:** Cada vez que cambies media queries responsive. Si cambio no funciona, sospecha cascade.
+
+**Verificación:** DevTools (F12) → Selecciona elemento → Verifica "Computed" → ¿Qué regla gana?
 
 ---
 

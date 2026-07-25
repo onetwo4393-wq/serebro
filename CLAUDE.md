@@ -18,6 +18,29 @@ git commit -m "type: descripción"
 # Verificar en navegador
 ```
 
+### ⚠️ CSS Workflow: Verificación Obligatoria
+
+Cambios CSS (especialmente responsive) **SIEMPRE** verificar EN NAVEGADOR antes de reportar.
+
+**Problema:** "Agregué media query" no significa "funciona". Cascade CSS silencioso puede pisar cambios.
+
+**Workflow:**
+1. Editar CSS en `static/assets/css/style.css` (o `dark-mode.css`)
+2. Servidor recompila automático (hot-reload)
+3. **ABRE DevTools:** `F12` o `Ctrl+Shift+I`
+4. **Viewport mobile (375px):** Redimensiona o usa device mode
+5. **Selecciona elemento cambiado:** Click derecho → Inspect
+6. **Verifica en "Computed" tab:** ¿Qué regla CSS ganó? ¿Es la que esperás?
+7. Probá en otros viewports (768px tablet, 1024px desktop)
+8. **RECIÉN ENTONCES:** `git commit` y reportar
+
+**Qué buscar en Computed:**
+- ✅ Regla nueva tiene ✓ check, sin tachado
+- ❌ Regla nueva tiene ~ (override) — cascade le pisó
+- ⚠️ Regla anterior en gris tachado — fue reemplazada
+
+**Shortcut:** Media query no funciona → Lee ARCHITECTURE.md sección "CSS Cascade en Media Queries"
+
 ## Proyecto
 
 - **Generador:** Zola (static site generator)
