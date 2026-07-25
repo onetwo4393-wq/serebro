@@ -461,14 +461,37 @@ footer a:hover { text-decoration: underline; }
     /* Altura reducida para cartas */
     .carta-peleador { height: 280px; }
 
-    /* Header adaptado */
+    /* Header adaptado — stack vertical en móvil */
     .header-container {
-        flex-wrap: wrap;
-        gap: 15px;
-        padding: 15px;
+        flex-direction: column;
+        gap: 12px;
+        padding: 20px 10px;
     }
-    .nav-izq, .nav-der { width: 100%; justify-content: center; flex-wrap: wrap; }
-    .logo-line-top, .logo-line-bottom { width: 30px; }
+
+    .logo-centro {
+        width: 100%;
+        order: -1;
+    }
+
+    .nav-izq, .nav-der {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+        padding: 4px 10px;
+        margin: 2px;
+    }
+
+    .logo-line-top, .logo-line-bottom { width: 25px; }
+
+    .theme-toggle {
+        padding: 6px 10px;
+        width: auto;
+    }
 }
 
 .carta-us .carta-acento { background: linear-gradient(135deg, #b22234, #ffffff, #3c3b6e); }
