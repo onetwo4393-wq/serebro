@@ -439,7 +439,7 @@ footer a:hover { text-decoration: underline; }
 
     /* Paddings y margins reducidos */
     .hero-home { padding: 30px 15px; }
-    body.home .hero-home { padding-top: 100px; }
+    body.home .hero-home { padding-top: 160px; }
     .hero-seccion { padding: 25px 15px; min-height: 300px; }
     .protagonista-hero { padding: 30px 15px; }
     .contenedor { padding: 25px 15px; }
