@@ -64,6 +64,18 @@ git status          # Ver cambios
 git log --oneline   # Ver commits
 ```
 
+## Configuración Local
+
+**`.claude/settings.local.json`** — Define qué comandos Bash permitir sin confirmación.
+
+Contiene una lista de patrones autorizados para:
+- `zola serve`, `zola build` (desarrollo)
+- `git add`, `git commit`, `git branch` (versionado)
+- `curl`, `grep`, `sed` (utilidades)
+- `pkill`, `sleep`, `echo`, `cat` (control)
+
+**No modificar** a menos que necesites agregar nuevos comandos autorizados.
+
 ## Cómo Empezar Sesión
 
 1. Lee ARCHITECTURE.md (decisiones vigentes)
