@@ -427,15 +427,24 @@ footer a:hover { text-decoration: underline; }
     .logo-sub { font-size: 0.55rem; }
     .nav-link { font-size: 10px; }
     .tarjeta-titulo { font-size: 1.1rem; }
+    .sidebar-titulo { font-size: 1.4rem; }
+    .story-titulo { font-size: 0.9rem; }
+    .entrevista-titulo { font-size: 1rem; }
+    .pstat-val { font-size: 1.2rem; }
+    .hero-home p { font-size: 0.95rem; }
+    .hero-seccion-desc { font-size: 0.95rem; }
 
-    /* Paddings reducidos */
+    /* Paddings y margins reducidos */
     .hero-home { padding: 30px 15px; }
     body.home .hero-home { padding-top: 100px; }
     .hero-seccion { padding: 25px 15px; min-height: 300px; }
     .protagonista-hero { padding: 30px 15px; }
     .contenedor { padding: 25px 15px; }
+    .nota-container { padding: 0 15px; }
     .bloque-titulo { margin: 30px 0 20px; }
     .tarjeta { padding: 20px; }
+    .sidebar { padding: 20px; }
+    .footer { padding: 25px 15px; margin-top: 50px; }
 
     /* Grillas en una columna */
     .cartas-grid-home { grid-template-columns: 1fr; }
@@ -443,6 +452,8 @@ footer a:hover { text-decoration: underline; }
     .cartas-grid { grid-template-columns: 1fr; }
     .layout-top { grid-template-columns: 1fr; }
     .protagonista-layout { grid-template-columns: 1fr; }
+    .entrevista-card { flex-direction: column; }
+    .entrevista-thumb { width: 100%; height: 200px; }
 
     /* Altura reducida para cartas */
     .carta-peleador { height: 280px; }
@@ -454,6 +465,7 @@ footer a:hover { text-decoration: underline; }
         padding: 15px;
     }
     .nav-izq, .nav-der { width: 100%; justify-content: center; flex-wrap: wrap; }
+    .logo-line-top, .logo-line-bottom { width: 30px; }
 }
 
 .carta-us .carta-acento { background: linear-gradient(135deg, #b22234, #ffffff, #3c3b6e); }
