@@ -94,9 +94,9 @@ body.home .nav-link:hover {
 .carta-stat-valor { color: var(--text-over-dark); }
 .carta-borde { border: 1px solid rgba(201,168,76,0.2); }
 .carta-peleador:hover .carta-borde { border-color: rgba(201,168,76,0.6); }
-.carta-rating { background: rgba(201,168,76,0.9); }
-.carta-rating-ovr { color: rgba(201,168,76,0.7); }
-.carta-rating-num { color: #e8c96a; }
+.carta-rating { background: rgba(201,168,76,0.9) !important; }
+.carta-rating-ovr { color: rgba(201,168,76,0.7) !important; }
+.carta-rating-num { color: #e8c96a !important; }
 
 .coming-soon-desc { color: var(--text-muted); }
 .coming-soon-banner-contenido p { color: var(--text-muted); }
