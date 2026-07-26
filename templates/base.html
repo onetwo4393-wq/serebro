@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" id="dark-mode-css" href="/assets/css/dark-mode.css" disabled>
+    <script>if (localStorage.getItem('dark-mode') === '1') { document.getElementById('dark-mode-css').disabled = false; }</script>
 </head>
 <body class="{% block body_class %}{% endblock %}">
     <header>
@@ -47,7 +48,8 @@
             <nav class="nav-der" aria-label="Navegación secundaria">
                 <a href="/sobre-jorge/" class="nav-link">Sobre Jorge</a>
                 <a href="/contacto/" class="nav-link">Contacto</a>
-                <button class="theme-toggle" aria-label="Cambiar tema" onclick="const s=document.getElementById('dark-mode-css');s.disabled=!s.disabled;this.textContent=s.disabled?'🌙':'☀️'">🌙</button>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema" onclick="const s=document.getElementById('dark-mode-css');s.disabled=!s.disabled;localStorage.setItem('dark-mode', s.disabled ? '0' : '1');this.textContent=s.disabled?'🌙':'☀️'">🌙</button>
+                <script>if (localStorage.getItem('dark-mode') === '1') { document.getElementById('theme-toggle').textContent = '☀️'; }</script>
             </nav>
         </div>
     </header>
