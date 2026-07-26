@@ -638,6 +638,18 @@ footer a:hover { text-decoration: underline; }
 .carta-br .carta-stat-label { color: #ffdf00; }
 .carta-br:hover { box-shadow: 0 20px 60px rgba(0,156,59,0.4); }
 
+/* Inglaterra */
+.carta-gb .carta-acento { background: linear-gradient(135deg, #C8102E, #ffffff, #012169); }
+.carta-gb .carta-pais { color: #C8102E; }
+.carta-gb .carta-stat-label { color: #C8102E; }
+.carta-gb:hover { box-shadow: 0 20px 60px rgba(200,16,46,0.4); }
+
+/* Cuba */
+.carta-cu .carta-acento { background: linear-gradient(135deg, #002A8F, #ffffff, #CB1515); }
+.carta-cu .carta-pais { color: #CB1515; }
+.carta-cu .carta-stat-label { color: #CB1515; }
+.carta-cu:hover { box-shadow: 0 20px 60px rgba(203,21,21,0.4); }
+
 /* Badge FIFA style — Boxeo */
 .carta-rating {
     position: absolute;

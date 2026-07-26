@@ -19,6 +19,8 @@
                 {% elif prot.extra.nacionalidad is containing("Irlanda") %}{% set clase_pais = "carta-ie" %}
                 {% elif prot.extra.nacionalidad is containing("Rusia") %}{% set clase_pais = "carta-ru" %}
                 {% elif prot.extra.nacionalidad is containing("Brasil") %}{% set clase_pais = "carta-br" %}
+                {% elif prot.extra.nacionalidad == "Inglaterra" %}{% set clase_pais = "carta-gb" %}
+                {% elif prot.extra.nacionalidad == "Cuba" %}{% set clase_pais = "carta-cu" %}
                 {% endif %}
                 <div class="carta-peleador {{ clase_pais }}">
                     <div class="carta-acento"></div>
