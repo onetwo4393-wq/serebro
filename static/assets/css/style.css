@@ -262,27 +262,6 @@ footer a:hover { text-decoration: underline; }
 .hero-home h1 { font-family: var(--font-titulo); font-size: 4rem; text-transform: uppercase; margin: 0 0 15px 0; color: #ffffff; line-height: 1; text-shadow: 0 2px 8px rgba(0,0,0,0.7); }
 .hero-home p { font-size: 1.15rem; color: #ffffff; max-width: 600px; margin: 0; line-height: 1.5; text-shadow: 0 1px 4px rgba(0,0,0,0.8); }
 
-/* --- HERO SECCIÓN --- */
-.hero-seccion { background: linear-gradient(to top, rgba(88,89,91,1) 0%, rgba(88,89,91,0.4) 100%), #1a1a1a; border-top: 4px solid var(--accent); padding: 50px 40px; display: flex; flex-direction: column; justify-content: flex-end; min-height: 420px; }
-.hero-seccion-titulo { font-family: var(--font-titulo); font-size: 3rem; text-transform: uppercase; margin: 15px 0; line-height: 1.1; color: var(--text-over-dark); }
-.hero-seccion-titulo a { transition: color 0.2s; color: var(--text-over-dark); }
-.hero-seccion-titulo a:hover { color: var(--accent); }
-.hero-seccion-desc { font-size: 1.05rem; color: #d4c4a8; max-width: 700px; margin: 0; line-height: 1.5; }
-
-/* --- LAYOUT HERO + SIDEBAR --- */
-.layout-top { display: grid; grid-template-columns: 2.5fr 1fr; gap: 30px; margin-bottom: 50px; }
-
-/* --- SIDEBAR --- */
-.sidebar { background: var(--bg-dark); padding: 25px; border-top: 4px solid var(--accent); }
-.sidebar-titulo { font-family: var(--font-titulo); font-size: 1.8rem; text-transform: uppercase; color: var(--text-over-dark); margin: 0 0 20px 0; }
-.lista-stories { list-style: none; padding: 0; margin: 0; }
-.item-story { display: flex; align-items: flex-start; gap: 15px; padding-bottom: 18px; margin-bottom: 18px; border-bottom: 1px solid rgba(240,227,207,0.15); }
-.item-story:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-.story-numero { background: var(--accent); color: #fff; font-family: var(--font-titulo); font-size: 1.4rem; min-width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.story-titulo { font-family: var(--font-titulo); font-size: 1.1rem; text-transform: uppercase; line-height: 1.2; margin: 0; color: var(--text-over-dark); }
-.story-titulo a { transition: color 0.2s; color: var(--text-over-dark); }
-.story-titulo a:hover { color: var(--accent); }
-
 /* --- NOTA INDIVIDUAL --- */
 .nota-container {
     max-width: 1100px;
@@ -401,13 +380,11 @@ footer a:hover { text-decoration: underline; }
     .cartas-grid-home { grid-template-columns: repeat(2, 1fr); }
     .cartas-grid { grid-template-columns: repeat(2, minmax(200px, 1fr)); }
     .hero-home h1 { font-size: 2.2rem; }
-    .hero-seccion-titulo { font-size: 2rem; }
     .seccion-titulo { font-size: 2rem; }
     .nota-titulo { font-size: 2rem; }
     .logo-text { font-size: 1.8rem; }
     .nav-link { font-size: 11px; }
     .hero-home { padding: 50px 30px; }
-    .hero-seccion { padding: 40px 30px; }
     body.home .hero-home { padding-top: 140px; }
     .carta-peleador { height: 350px; }
     .contenedor { padding: 30px 20px; }
@@ -418,7 +395,6 @@ footer a:hover { text-decoration: underline; }
 @media (max-width: 600px) {
     /* Tipografía reducida para móvil */
     .hero-home h1 { font-size: 1.8rem; }
-    .hero-seccion-titulo { font-size: 1.5rem; }
     .seccion-titulo { font-size: 1.6rem; }
     .bloque-titulo { font-size: 1.3rem; }
     .nota-titulo { font-size: 1.5rem; }
@@ -429,30 +405,24 @@ footer a:hover { text-decoration: underline; }
     .logo-sub { font-size: 0.55rem; }
     .nav-link { font-size: 10px; }
     .tarjeta-titulo { font-size: 1.1rem; }
-    .sidebar-titulo { font-size: 1.4rem; }
-    .story-titulo { font-size: 0.9rem; }
     .entrevista-titulo { font-size: 1rem; }
     .pstat-val { font-size: 1.2rem; }
     .hero-home p { font-size: 0.95rem; }
-    .hero-seccion-desc { font-size: 0.95rem; }
 
     /* Paddings y margins reducidos */
     .hero-home { padding: 30px 15px; }
     body.home .hero-home { padding-top: 210px; }
-    .hero-seccion { padding: 25px 15px; min-height: 300px; }
     .protagonista-hero { padding: 30px 15px; }
     .contenedor { padding: 25px 15px; }
     .nota-container { padding: 0 15px; }
     .bloque-titulo { margin: 30px 0 20px; }
     .tarjeta { padding: 20px; }
-    .sidebar { padding: 20px; }
     footer { padding: 25px 15px; margin-top: 50px; }
 
     /* Grillas en una columna */
     .cartas-grid-home { grid-template-columns: repeat(2, 1fr) !important; }
     .grilla { grid-template-columns: 1fr; }
     .cartas-grid { grid-template-columns: 1fr; }
-    .layout-top { grid-template-columns: 1fr; }
     .protagonista-layout { grid-template-columns: 1fr; }
     .entrevista-card { flex-direction: column; }
     .entrevista-thumb { width: 100%; height: 200px; }
@@ -724,7 +694,6 @@ footer a:hover { text-decoration: underline; }
     .cartas-grid-home { grid-template-columns: repeat(4, 1fr); }
     body.home .hero-home { padding-top: 180px; }
     .hero-home { padding: 80px 60px; }
-    .hero-seccion { padding: 50px 40px; }
     .contenedor { padding: 40px 20px; }
     .carta-peleador { height: 420px; }
     .bloque-titulo { margin: 50px 0 30px 0; }

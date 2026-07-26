@@ -72,15 +72,8 @@ body.home .nav-link:hover {
                 url(/assets/img/hero/estructura_auto.webp) center/cover no-repeat;
 }
 
-.hero-seccion {
-    background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 100%), #0d0d0f;
-}
-.hero-seccion-desc { color: var(--text-muted); }
-
 .nota-titulo { color: var(--text-over-dark); }
 .nota-fecha { color: var(--text-muted); }
-
-.item-story { border-bottom: 1px solid rgba(245,241,232,0.15); }
 
 .protagonista-nombre { color: var(--text-over-dark); }
 .protagonista-stats-bar { border-top: 1px solid rgba(245,241,232,0.2); }
@@ -122,10 +115,6 @@ body.home .nav-link:hover {
     .hero-home h1 {
         font-size: 1.8rem;
         color: #f5f1e8;
-    }
-    .hero-seccion-titulo {
-        color: #f5f1e8;
-        font-size: 1.5rem;
     }
     .seccion-titulo {
         color: #f5f1e8;
