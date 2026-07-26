@@ -57,14 +57,13 @@ cat > content/boxeo/nuevo.md << 'EOF'
 +++
 title = "Título"
 date = 2026-07-25
-slug = "nuevo"
 +++
 
 Contenido aquí.
 EOF
 ```
 
-**Frontmatter obligatorio:** `title`, `date`, `slug`
+**Frontmatter obligatorio:** `title`, `date`. El `slug` es opcional — Zola lo infiere del nombre de archivo si no se declara explícitamente (así es como está todo el contenido actual del repo).
 
 ## Para Más Info
 
