@@ -10,7 +10,7 @@ categoria = "Supermedianos / Semipesados"
 record = "62-3-2"
 destacado = true
 disciplina = "boxeo"
-rating = 98
+rating = "98"
 bandera = "🇲🇽"
 foto = "canelo.jpg"
 +++
