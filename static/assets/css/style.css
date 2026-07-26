@@ -627,9 +627,10 @@ footer a:hover { text-decoration: underline; }
     margin-bottom: 12px;
 }
 
-/* Grid home: 4 columnas */
-.cartas-grid-home {
-    grid-template-columns: repeat(4, 1fr);
+/* Grid home: 2 columnas en el resto del rango tablet (769-1023px).
+   601-768px ya lo cubre el media query de arriba; 4 columnas es solo desktop (ver @media 1024px). */
+@media (max-width: 1023px) and (min-width: 769px) {
+    .cartas-grid-home { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* Brasil */
