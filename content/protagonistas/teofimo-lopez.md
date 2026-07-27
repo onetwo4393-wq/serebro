@@ -4,7 +4,7 @@ date = 2026-07-14
 template = "protagonista.html"
 description = "El Takeover. Campeón unificado que venció a Lomachenko y se convirtió en la nueva estrella del boxeo mundial."
 [extra]
-nacionalidad = "Honduras / USA"
+nacionalidad = "Honduras / Estados Unidos"
 bandera = "🇭🇳"
 apodo = "The Takeover"
 categoria = "Superligero"
