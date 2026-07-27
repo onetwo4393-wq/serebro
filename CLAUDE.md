@@ -46,7 +46,7 @@ Cambios CSS (especialmente responsive) **SIEMPRE** verificar EN NAVEGADOR antes 
 - **Generador:** Zola (static site generator)
 - **Templating:** Jinja2
 - **Styling:** CSS custom + dark mode
-- **Hosting:** Netlify (automatic deploys)
+- **Hosting:** Cloudflare Pages (automatic deploys)
 
 ## Carpetas Principales
 

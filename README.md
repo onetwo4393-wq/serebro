@@ -2,14 +2,14 @@
 
 Periodismo deportivo de **Boxeo, UFC y MMA** — análisis sin filtro desde adentro de la jaula.
 
-**Sitio en vivo:** https://portal-serebro.netlify.app
+**Sitio en vivo:** https://serebro-eju.pages.dev
 
 ## Stack
 
 - **Generador:** [Zola](https://www.getzola.org/) (static site)
 - **Templating:** Jinja2
 - **Estilo:** CSS custom + Dark mode
-- **Deploy:** Netlify (automático en push a main)
+- **Deploy:** Cloudflare Pages (automático en push a main)
 
 ## Desarrollo Local
 
