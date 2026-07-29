@@ -1,0 +1,23 @@
+name: doctor
+
+on:
+  push:
+  pull_request:
+    branches: [main]
+
+jobs:
+  doctor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar Zola
+        env:
+          ZOLA_VERSION: "0.22.1"
+        run: |
+          curl -sSL "https://github.com/getzola/zola/releases/download/v${ZOLA_VERSION}/zola-v${ZOLA_VERSION}-x86_64-unknown-linux-gnu.tar.gz" | tar xz
+          sudo mv zola /usr/local/bin/
+          zola --version
+
+      - name: make doctor
+        run: make doctor

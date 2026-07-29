@@ -6,6 +6,7 @@ Bienvenido. Este archivo te orienta sobre el laboratorio.
 
 - **README.md** — Qué es SerEbro (descripción del proyecto)
 - **ARCHITECTURE.md** — Por qué hacemos las cosas así (decisiones de diseño)
+- **ENVIRONMENT.md** — Qué puede y no puede hacer el sandbox (herramientas, red)
 - **WORK_CONTRACT.md** — Cómo trabajamos juntos (ver `/root/.claude/WORK_CONTRACT.md`)
 
 ## Flujo Típico
@@ -13,33 +14,26 @@ Bienvenido. Este archivo te orienta sobre el laboratorio.
 ```
 zola serve --interface 0.0.0.0 --port [port]
 # Editar archivos
+make doctor          # audits + smoke test (ver sección CSS Workflow)
 git add [archivo]
 git commit -m "type: descripción"
-# Verificar en navegador
+git push             # Cloudflare Pages deploya y ahí se valida visualmente
 ```
 
-### ⚠️ CSS Workflow: Verificación Obligatoria
+### ⚠️ CSS Workflow: Verificación
 
-Cambios CSS (especialmente responsive) **SIEMPRE** verificar EN NAVEGADOR antes de reportar.
+Este sandbox **no tiene navegador** (sin Playwright, sin acceso al registry de npm — ver `ENVIRONMENT.md`). La validación visual final la hace el humano en el deploy real de Cloudflare Pages, después del push. No bloquees un commit intentando "ver" el resultado vos mismo — no es posible en este entorno.
 
-**Problema:** "Agregué media query" no significa "funciona". Cascade CSS silencioso puede pisar cambios.
+Lo que sí podés y debés garantizar antes de commitear es que la cascada CSS no se está pisando silenciosamente (el problema real detrás de casi todos los bugs visuales que tuvo este repo — ver `ARCHITECTURE.md` sección 2.1).
 
 **Workflow:**
 1. Editar CSS en `static/assets/css/style.css` (o `dark-mode.css`)
-2. Servidor recompila automático (hot-reload)
-3. **ABRE DevTools:** `F12` o `Ctrl+Shift+I`
-4. **Viewport mobile (375px):** Redimensiona o usa device mode
-5. **Selecciona elemento cambiado:** Click derecho → Inspect
-6. **Verifica en "Computed" tab:** ¿Qué regla CSS ganó? ¿Es la que esperás?
-7. Probá en otros viewports (768px tablet, 1024px desktop)
-8. **RECIÉN ENTONCES:** `git commit` y reportar
+2. `make audit-css` (o `make doctor` para correr los 4 audits) — detecta selector duplicado o regla incondicional pisando un `@media`
+3. `zola build` sin errores
+4. `git commit` y en el mensaje/reporte indicá qué viewport y qué modo (light/dark) debería revisar el humano
+5. `git push` — Cloudflare Pages deploya automático; el humano valida en el sitio real y avisa si algo no coincide
 
-**Qué buscar en Computed:**
-- ✅ Regla nueva tiene ✓ check, sin tachado
-- ❌ Regla nueva tiene ~ (override) — cascade le pisó
-- ⚠️ Regla anterior en gris tachado — fue reemplazada
-
-**Shortcut:** Media query no funciona → Lee ARCHITECTURE.md sección "CSS Cascade en Media Queries"
+**Shortcut:** Si `audit-css` no detecta nada pero el humano reporta que "la media query no funciona" → releé `ARCHITECTURE.md` sección "CSS Cascade en Media Queries", puede ser un patrón que el script todavía no cubre.
 
 ## Proyecto
 
@@ -60,6 +54,7 @@ Cambios CSS (especialmente responsive) **SIEMPRE** verificar EN NAVEGADOR antes 
 ```bash
 zola build          # Compilar sitio
 zola serve          # Servidor local + hot-reload
+make doctor         # 4 audits (css, dark mode, build, frontmatter) — correr antes de commitear
 git status          # Ver cambios
 git log --oneline   # Ver commits
 ```
