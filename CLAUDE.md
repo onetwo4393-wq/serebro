@@ -7,6 +7,7 @@ Bienvenido. Este archivo te orienta sobre el laboratorio.
 - **README.md** — Qué es SerEbro (descripción del proyecto)
 - **ARCHITECTURE.md** — Por qué hacemos las cosas así (decisiones de diseño)
 - **ENVIRONMENT.md** — Qué puede y no puede hacer el sandbox (herramientas, red)
+- **HERRAMIENTAS.md** — Qué necesita el agente ahora y a futuro (el laboratorio crece más allá de SerEbro)
 - **WORK_CONTRACT.md** — Cómo trabajamos juntos (ver `/root/.claude/WORK_CONTRACT.md`)
 
 ## Flujo Típico
