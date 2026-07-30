@@ -1,25 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(zola serve *)",
-      "Bash(curl -s http://localhost:8080/)",
-      "Bash(zola build *)",
-      "Bash(curl -s http://127.0.0.1:9999/)",
-      "Bash(git add *)",
-      "Bash(git commit -m ' *)",
-      "Bash(git config *)",
-      "Bash(git ls-files *)",
-      "Bash(git show-branch *)",
-      "Bash(git branch *)",
-      "Bash(git commit *)",
-      "Bash(curl -s -o /dev/null -w \"HTTP Status: %{http_code}\\n\" http://127.0.0.1:9999/)",
-      "Bash(pkill *)",
-      "Bash(sleep *)",
-      "Bash(echo *)",
-      "Bash(cat *)",
-      "Bash(grep *)",
-      "Bash(sed *)",
-      "Bash(curl -s http://localhost:1111)"
+      "Bash(*)",
+      "Edit(*)",
+      "Write(*)"
     ]
   }
 }

@@ -8,7 +8,14 @@ Bienvenido. Este archivo te orienta sobre el laboratorio.
 - **ARCHITECTURE.md** — Por qué hacemos las cosas así (decisiones de diseño)
 - **ENVIRONMENT.md** — Qué puede y no puede hacer el sandbox (herramientas, red)
 - **HERRAMIENTAS.md** — Qué necesita el agente ahora y a futuro (el laboratorio crece más allá de SerEbro)
+- **AUDITORIA_SONNET.md** — Auditoría técnica puntual (CSS, templates, contenido) que originó los audits de `make doctor`
+- **WORKSPACE_MEJORAS.md** — Reflexión de proceso: qué faltó como herramienta durante varias sesiones de trabajo
 - **WORK_CONTRACT.md** — Cómo trabajamos juntos (ver `/root/.claude/WORK_CONTRACT.md`)
+
+## Reglas de Trabajo
+
+- **Scope estricto:** solo trabajar con los archivos explícitamente mencionados en cada tarea. Si encontrás algo relacionado fuera del scope, documentalo al final del reporte pero NO lo toques.
+- **Sugerencias al final:** las sugerencias van al final de cada tarea, nunca interrumpiendo el trabajo en curso.
 
 ## Flujo Típico
 
@@ -49,6 +56,7 @@ Lo que sí podés y debés garantizar antes de commitear es que la cascada CSS n
 - `templates/` — HTML Jinja2 (layout, componentes)
 - `static/assets/` — CSS, imágenes
 - `zola.toml` — Configuración
+- `inbox/` — Bandeja de entrada para capturas/imágenes que el humano manda para procesar (no versionado, ver `.gitignore`). Ver workflow en `/root/.claude/WORK_CONTRACT.md`.
 
 ## Comandos Esenciales
 
@@ -62,15 +70,9 @@ git log --oneline   # Ver commits
 
 ## Configuración Local
 
-**`.claude/settings.local.json`** — Define qué comandos Bash permitir sin confirmación.
+**`.claude/settings.local.json`** — Permisos del agente en este sandbox.
 
-Contiene una lista de patrones autorizados para:
-- `zola serve`, `zola build` (desarrollo)
-- `git add`, `git commit`, `git branch` (versionado)
-- `curl`, `grep`, `sed` (utilidades)
-- `pkill`, `sleep`, `echo`, `cat` (control)
-
-**No modificar** a menos que necesites agregar nuevos comandos autorizados.
+El humano configuró `Bash(*)`, `Edit(*)`, `Write(*)` (acceso total) a propósito, no por descuido. **El agente no debe modificar ni acotar estos permisos por su cuenta** — si en algún momento parece que hace falta más o menos restricción, se pregunta antes de tocar el archivo.
 
 ## Cómo Empezar Sesión
 
